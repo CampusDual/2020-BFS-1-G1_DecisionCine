@@ -1,2 +1,1 @@
-# ProyectoGrupo1
-Proyecto Grupo 1
+# Proyecto - Equipo Apple - Grupo 1
