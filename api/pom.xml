@@ -4,13 +4,13 @@
 
     <parent>
         <groupId>com.imatia</groupId>
-        <artifactId>ProyectoGAG1</artifactId>
+        <artifactId>DecisionCine</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <name>Basic project api</name>
-    <description>Basic project api code.</description>
-    <artifactId>ProyectoGAG1-api</artifactId>
+    <name>Decision cine api</name>
+    <description>Decision Cine api code.</description>
+    <artifactId>DecisionCine-api</artifactId>
     <packaging>jar</packaging>
 
     <properties>

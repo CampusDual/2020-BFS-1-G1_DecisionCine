@@ -4,32 +4,32 @@
 
 	<parent>
 		<groupId>com.imatia</groupId>
-		<artifactId>ProyectoGAG1</artifactId>
+		<artifactId>DecisionCine</artifactId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 
-	<name>Basic project boot</name>
-	<description>Basic project services.</description>
-	<artifactId>ProyectoGAG1-boot</artifactId>
+	<name>Decision Cine boot</name>
+	<description>Decision Cine services.</description>
+	<artifactId>DecisionCine-boot</artifactId>
 	<packaging>jar</packaging>
 
 	<dependencies>
 		<dependency>
 			<groupId>com.imatia</groupId>
-			<artifactId>ProyectoGAG1-api</artifactId>
+			<artifactId>DecisionCine-api</artifactId>
 		</dependency>
 
 		<dependency>
 			<groupId>com.imatia</groupId>
-			<artifactId>ProyectoGAG1-frontend</artifactId>
+			<artifactId>DecisionCine-frontend</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.imatia</groupId>
-			<artifactId>ProyectoGAG1-model</artifactId>
+			<artifactId>DecisionCine-model</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.imatia</groupId>
-			<artifactId>ProyectoGAG1-ws</artifactId>
+			<artifactId>DecisionCine-ws</artifactId>
 		</dependency>
 	</dependencies>
 

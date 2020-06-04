@@ -3,12 +3,12 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.imatia</groupId>
-		<artifactId>ProyectoGAG1</artifactId>
+		<artifactId>DecisionCine</artifactId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>ProyectoGAG1-model</artifactId>
-	<name>Basic project model</name>
-	<description>Basic project models</description>
+	<artifactId>DecisionCine-model</artifactId>
+	<name>Decision Cine model</name>
+	<description>Decision Cine models</description>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -23,12 +23,12 @@
 		</dependency>
 		<dependency>
 			<groupId>com.imatia</groupId>
-			<artifactId>ProyectoGAG1-api</artifactId>
+			<artifactId>DecisionCine-api</artifactId>
 		</dependency>
 
 		<dependency>
 			<groupId>com.imatia</groupId>
-			<artifactId>ProyectoGAG1-frontend</artifactId>
+			<artifactId>DecisionCine-frontend</artifactId>
 		</dependency>
 
 		<dependency>
