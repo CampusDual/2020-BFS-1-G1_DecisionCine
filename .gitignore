@@ -1,0 +1,26 @@
+#eclipse
+.project
+.classpath
+.configure
+.settings
+bin
+
+# intellij
+*.iml
+.idea
+.metadata
+
+#mvn
+target
+
+#logs
+log*
+
+#node
+node_modules
+
+model/src/main/db/*.lck
+model/src/main/db/*.log
+model/src/main/db/*.properties
+model/src/main/db/*.script
+model/src/main/db/*.tmp
