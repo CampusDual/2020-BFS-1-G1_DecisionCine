@@ -3,16 +3,16 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.imatia</groupId>
-		<artifactId>DecisionCine</artifactId>
+		<artifactId>decision-cine</artifactId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>DecisionCine-ws</artifactId>
+	<artifactId>decision-cine-ws</artifactId>
 	<name>Decision Cine ws</name>
 	<description>Decision Cine webservice</description>
 	<dependencies>
 		<dependency>
 			<groupId>com.imatia</groupId>
-			<artifactId>DecisionCine-model</artifactId>
+			<artifactId>decision-cine-model</artifactId>
 		</dependency>
 	</dependencies>
 </project>

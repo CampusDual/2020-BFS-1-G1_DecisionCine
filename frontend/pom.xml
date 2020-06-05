@@ -4,13 +4,13 @@
 
 	<parent>
 		<groupId>com.imatia</groupId>
-		<artifactId>DecisionCine</artifactId>
+		<artifactId>decision-cine</artifactId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 
 	<name>Decision Cine frontend</name>
 	<description>Decision Cine frontend app.</description>
-	<artifactId>DecisionCine-frontend</artifactId>
+	<artifactId>decision-cine-frontend</artifactId>
 	<packaging>jar</packaging>
 
 	<build>

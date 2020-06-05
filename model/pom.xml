@@ -3,10 +3,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.imatia</groupId>
-		<artifactId>DecisionCine</artifactId>
+		<artifactId>decision-cine</artifactId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>DecisionCine-model</artifactId>
+	<artifactId>decision-cine-model</artifactId>
 	<name>Decision Cine model</name>
 	<description>Decision Cine models</description>
 	<properties>
@@ -23,12 +23,12 @@
 		</dependency>
 		<dependency>
 			<groupId>com.imatia</groupId>
-			<artifactId>DecisionCine-api</artifactId>
+			<artifactId>decision-cine-api</artifactId>
 		</dependency>
 
 		<dependency>
 			<groupId>com.imatia</groupId>
-			<artifactId>DecisionCine-frontend</artifactId>
+			<artifactId>decision-cine-frontend</artifactId>
 		</dependency>
 
 		<dependency>

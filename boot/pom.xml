@@ -4,32 +4,32 @@
 
 	<parent>
 		<groupId>com.imatia</groupId>
-		<artifactId>DecisionCine</artifactId>
+		<artifactId>decision-cine</artifactId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 
 	<name>Decision Cine boot</name>
 	<description>Decision Cine services.</description>
-	<artifactId>DecisionCine-boot</artifactId>
+	<artifactId>decision-cine-boot</artifactId>
 	<packaging>jar</packaging>
 
 	<dependencies>
 		<dependency>
 			<groupId>com.imatia</groupId>
-			<artifactId>DecisionCine-api</artifactId>
+			<artifactId>decision-cine-api</artifactId>
 		</dependency>
 
 		<dependency>
 			<groupId>com.imatia</groupId>
-			<artifactId>DecisionCine-frontend</artifactId>
+			<artifactId>decision-cine-frontend</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.imatia</groupId>
-			<artifactId>DecisionCine-model</artifactId>
+			<artifactId>decision-cine-model</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.imatia</groupId>
-			<artifactId>DecisionCine-ws</artifactId>
+			<artifactId>decision-cine-ws</artifactId>
 		</dependency>
 	</dependencies>
 
