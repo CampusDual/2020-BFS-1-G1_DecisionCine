@@ -3,7 +3,7 @@
                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                  xsi:schemaLocation="http://www.ontimize.com/schema/jdbc http://www.ontimize/jdbc/ontimize-jdbc-dao.xsd"
                  catalog="" schema="${mainschema}" table="comentario"
-                 datasource="mainDataSource" sqlhandler="dfSQLStatementHandler">
+                 datasource="mainDataSource" sqlhandler="dbSQLStatementHandler">
 
     <DeleteKeys>
         <Column>comentario_id</Column>
