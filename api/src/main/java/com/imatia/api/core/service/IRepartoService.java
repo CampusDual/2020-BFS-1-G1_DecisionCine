@@ -8,7 +8,6 @@ import java.util.Map;
 
 public interface IRepartoService {
 
-    //COMENTARIO
     public EntityResult repartoQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException;
     public EntityResult repartoInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException;
     public EntityResult repartoUpdate(Map<String, Object> attrMap , Map<String , Object> keyMap) throws OntimizeJEERuntimeException;
