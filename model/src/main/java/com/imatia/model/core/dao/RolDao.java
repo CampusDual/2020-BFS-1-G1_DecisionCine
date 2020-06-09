@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 public class RolDao extends OntimizeJdbcDaoSupport {
 
 	public static final String ID = "rol_id";
-	public static final String PHOTO = "rol_nombre";
+	public static final String NOMBRE = "rol_nombre";
 
 
 }
