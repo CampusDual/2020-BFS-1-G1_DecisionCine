@@ -30,7 +30,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"data\": {\n        \"noticia_descripcion\": \"descripcion de prueba en peti POST\"\n    },\n    \"sqltypes\": {\n        \"noticia_descripcion\": 12\n    \n}}",
+							"raw": "{\n    \"data\": {\n        \"noticia_usuario_id\": 1,\n        \"noticia_descripcion\": \"descripcion de prueba en peti POST C\",\n        \"noticia_fecha_alta\": \"2020-02-01\"\n    },\n    \"sqltypes\": {\n        \"noticia_id\": 4,\n        \"noticia_usuario_id\": 4,\n        \"noticia_descripcion\": 12,\n        \"noticia_fecha_alta\": 91,\n        \"noticia_fecha_modificacion\": 91\n    }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -139,7 +139,7 @@
 					"response": []
 				},
 				{
-					"name": "candidate -U",
+					"name": "noticia -U",
 					"request": {
 						"auth": {
 							"type": "basic",
@@ -160,7 +160,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"filter\" :{\n\t\t\"ID\" :15\n\t},\n    \"data\": {\n        \"EMAIL\": \"wwilson@example.org\"\n    },\n    \"sqltypes\": {\n        \"SPECIALTIES\": 12,\n        \"LINKEDIN\": 12,\n        \"PHONE\": 12,\n        \"EXPERIENCE_LEVEL\": 4,\n        \"STATUS\": 4,\n        \"EMAIL\": 12,\n        \"WAGE_LEVEL\": 2,\n        \"DNI\": 12,\n        \"ID\": 4,\n        \"ORIGIN\": 4,\n        \"EDUCATION\": 4,\n        \"COMMENT\": 12,\n        \"PROFILE\": 4,\n        \"SURNAME\": 12,\n        \"NAME\": 12,\n        \"BIRTHDAY\": 91\n    }\n}",
+							"raw": "{\n\t\"filter\" :{\n\t\t\"noticia_id\" :1\n\t},\n    \"data\": {\n        \"noticia_descripcion\": \"descripcion de prueba en peti PUT U\"\n    },\n    \"sqltypes\": {\n        \"noticia_id\": 4,\n        \"noticia_usuario_id\": 4,\n        \"noticia_descripcion\": 12,\n        \"noticia_fecha_alta\": 91,\n        \"noticia_fecha_modificacion\": 91\n    }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -168,15 +168,15 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:33333/candidates/candidate",
+							"raw": "http://localhost:33333/news/new",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "33333",
 							"path": [
-								"candidates",
-								"candidate"
+								"news",
+								"new"
 							]
 						}
 					},
