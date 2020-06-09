@@ -1,0 +1,271 @@
+{
+	"info": {
+		"_postman_id": "66b8d05b-4d9c-4acc-81bf-82fd5c095ce1",
+		"name": "Decision Cine",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Noticias",
+			"item": [
+				{
+					"name": "noticia -C",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "demouser",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"noticia_descripcion\": \"descripcion de prueba en peti POST\"\n    },\n    \"sqltypes\": {\n        \"noticia_descripcion\": 12\n    \n}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:33333/news/new",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "33333",
+							"path": [
+								"news",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "noticia -R",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "demouser",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:33333/news/new?columns=noticia_id,noticia_usuario_id,noticia_descripcion,noticia_fecha_alta,noticia_fecha_modificacion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "33333",
+							"path": [
+								"news",
+								"new"
+							],
+							"query": [
+								{
+									"key": "columns",
+									"value": "noticia_id,noticia_usuario_id,noticia_descripcion,noticia_fecha_alta,noticia_fecha_modificacion"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "noticia -R (complex)",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "demouser",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"filter\": {\n    \t\"noticia_id\": 1\n    },\n    \"columns\": [\n        \"noticia_id\",\n        \"noticia_usuario_id\",\n        \"noticia_descripcion\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:33333/news/new/search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "33333",
+							"path": [
+								"news",
+								"new",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "candidate -U",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "demouser",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"filter\" :{\n\t\t\"ID\" :15\n\t},\n    \"data\": {\n        \"EMAIL\": \"wwilson@example.org\"\n    },\n    \"sqltypes\": {\n        \"SPECIALTIES\": 12,\n        \"LINKEDIN\": 12,\n        \"PHONE\": 12,\n        \"EXPERIENCE_LEVEL\": 4,\n        \"STATUS\": 4,\n        \"EMAIL\": 12,\n        \"WAGE_LEVEL\": 2,\n        \"DNI\": 12,\n        \"ID\": 4,\n        \"ORIGIN\": 4,\n        \"EDUCATION\": 4,\n        \"COMMENT\": 12,\n        \"PROFILE\": 4,\n        \"SURNAME\": 12,\n        \"NAME\": 12,\n        \"BIRTHDAY\": 91\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:33333/candidates/candidate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "33333",
+							"path": [
+								"candidates",
+								"candidate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "candidate -D",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "demouser",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"filter\" :{\n\t\t\"ID\" :15\n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:33333/candidates/candidate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "33333",
+							"path": [
+								"candidates",
+								"candidate"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "demouser",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "demo",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "da23bd76-51cd-4551-be67-de10f86ae2cd",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "e3e834ee-d7cc-4c03-bdf7-c38cabd4982b",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
