@@ -31,22 +31,22 @@ public class NewServiceImpl implements NewService {
 
 
 	@Override
-	public EntityResult newQuery(Map<?, ?> keyMap, List<?> attrList) {
+	public EntityResult newQuery(Map<String, Object> keyMap, List<String> attrList) {
 		return this.daoHelper.query(this.newDao, keyMap, attrList);
 	}
 
 	@Override
-	public EntityResult newInsert(Map<?, ?> attrMap) {
+	public EntityResult newInsert(Map<String, Object> attrMap) {
 		return this.daoHelper.insert(this.newDao, attrMap);
 	}
 
 	@Override
-	public EntityResult newUpdate(Map<?, ?> attrMap, Map<?, ?> keyMap) {
+	public EntityResult newUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap) {
 		return this.daoHelper.update(this.newDao, attrMap, keyMap);
 	}
 
 	@Override
-	public EntityResult newDelete(Map<?, ?> keyMap) {
+	public EntityResult newDelete(Map<String, Object> keyMap) {
 		return this.daoHelper.delete(this.newDao, keyMap);
 	}
 }

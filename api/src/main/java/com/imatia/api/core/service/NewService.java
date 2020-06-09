@@ -10,9 +10,9 @@ import java.util.Map;
 public interface NewService {
 
 	//NEW
-	public EntityResult newQuery(Map<?, ?> keyMap, List<?> attrList);
-	public EntityResult newInsert(Map<?, ?> attrMap);
-	public EntityResult newUpdate(Map<?, ?> attrMap, Map<?, ?> keyMap);
-	public EntityResult newDelete(Map<?, ?> keyMap);
+	public EntityResult newQuery(Map<String, Object> keyMap, List<String> attrList);
+	public EntityResult newInsert(Map<String, Object> attrMap);
+	public EntityResult newUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap);
+	public EntityResult newDelete(Map<String, Object> keyMap);
 
 }
