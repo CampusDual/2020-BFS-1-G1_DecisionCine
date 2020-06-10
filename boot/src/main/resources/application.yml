@@ -20,7 +20,7 @@ ontimize:
             - OPTIONS
             - DELETE
    jdbc:
-      nameConvention: upper
+      nameConvention: lower
       sqlhandler: oracle
       sqlConditionProcessor:
          uppperString: true

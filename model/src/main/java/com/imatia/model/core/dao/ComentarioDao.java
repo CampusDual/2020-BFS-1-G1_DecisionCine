@@ -10,10 +10,4 @@ import org.springframework.stereotype.Repository;
 @ConfigurationFile(configurationFile = "dao/ComentarioDao.xml", configurationFilePlaceholder = "dao/placeholders.properties")
 public class ComentarioDao extends OntimizeJdbcDaoSupport {
 
-    public static final String ATTR_comentario_id = "comentario_id";
-    public static final String ATTR_contenido_id= "contenido_id";
-    public static final String ATTR_usuario_id = "usuario_id";
-    public static final String ATTR_descripcion = "descripcion";
-    public static final String ATTR_fecha = "fecha";
-
 }

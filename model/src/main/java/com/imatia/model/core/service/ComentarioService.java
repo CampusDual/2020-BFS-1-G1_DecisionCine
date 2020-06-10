@@ -12,11 +12,10 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Map;
 
-@Service("ComentarioService")           //servicio de Comentario
-@Lazy                                   //permite que se ejecute cuando es llamado y no cuando se arranca el proyecto
+@Service("ComentarioService")
+@Lazy
 public class ComentarioService implements IComentarioService {
 
-    //enlaza con las variables definidas, sin usar getters y setters
     @Autowired private ComentarioDao comentarioDao;
     @Autowired private DefaultOntimizeDaoHelper daoHelper;
 
