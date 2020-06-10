@@ -8,11 +8,11 @@ import org.springframework.stereotype.Repository;
 
 
 @Lazy
-@Repository(value = "NewDao")
+@Repository(value = "NoticiaDao")
 @ConfigurationFile(
-	configurationFile = "dao/NewDao.xml",
+	configurationFile = "dao/NoticiaDao.xml",
 	configurationFilePlaceholder = "dao/placeholders.properties")
-public class NewDao extends OntimizeJdbcDaoSupport {
+public class NoticiaDao extends OntimizeJdbcDaoSupport {
 
 	public static final String NOTICIA_ID    		= "noticia_id";
 	public static final String NOTICIA_USUARIO_ID 	= "noticia_usuario_id";
