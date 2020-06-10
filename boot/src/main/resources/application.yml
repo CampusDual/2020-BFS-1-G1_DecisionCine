@@ -21,7 +21,7 @@ ontimize:
             - DELETE
    jdbc:
       nameConvention: lower
-      sqlhandler: oracle
+      sqlhandler: postgres
       sqlConditionProcessor:
          uppperString: true
          upperLike: true
