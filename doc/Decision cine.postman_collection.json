@@ -38,15 +38,15 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:33333/news/new",
+							"raw": "http://localhost:33333/noticias/noticia",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "33333",
 							"path": [
-								"news",
-								"new"
+								"noticias",
+								"noticia"
 							]
 						}
 					},
@@ -73,15 +73,15 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:33333/news/new?columns=noticia_id,noticia_usuario_id,noticia_descripcion,noticia_fecha_alta,noticia_fecha_modificacion",
+							"raw": "http://localhost:33333/noticias/noticia?columns=noticia_id,noticia_usuario_id,noticia_descripcion,noticia_fecha_alta,noticia_fecha_modificacion",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "33333",
 							"path": [
-								"news",
-								"new"
+								"noticias",
+								"noticia"
 							],
 							"query": [
 								{
@@ -123,15 +123,15 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:33333/news/new/search",
+							"raw": "http://localhost:33333/noticias/noticia/search",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "33333",
 							"path": [
-								"news",
-								"new",
+								"noticias",
+								"noticia",
 								"search"
 							]
 						}
@@ -168,22 +168,22 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:33333/news/new",
+							"raw": "http://localhost:33333/noticias/noticia",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "33333",
 							"path": [
-								"news",
-								"new"
+								"noticias",
+								"noticia"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "candidate -D",
+					"name": "noticia -D",
 					"request": {
 						"auth": {
 							"type": "basic",
@@ -204,7 +204,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"filter\" :{\n\t\t\"ID\" :15\n\t}\n}",
+							"raw": "{\n\t\"filter\" :{\n\t\t\"noticia_id\" :13\n\t}\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -212,15 +212,15 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:33333/candidates/candidate",
+							"raw": "http://localhost:33333/noticias/noticia",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "33333",
 							"path": [
-								"candidates",
-								"candidate"
+								"noticias",
+								"noticia"
 							]
 						}
 					},
