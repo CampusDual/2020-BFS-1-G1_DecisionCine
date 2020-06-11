@@ -13,6 +13,10 @@ public interface IContenidoService {
     public EntityResult contenidoUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
     public EntityResult contenidoDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
 
-
+        //Tipo Contenido
+    public EntityResult tipocontenidoQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException;
+    public EntityResult tipocontenidoInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException;
+    public EntityResult tipocontenidoUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
+    public EntityResult tipocontenidoDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
 
 }
