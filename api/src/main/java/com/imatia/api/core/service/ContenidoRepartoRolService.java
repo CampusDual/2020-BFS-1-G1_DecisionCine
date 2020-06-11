@@ -8,13 +8,13 @@ import java.util.List;
 import java.util.Map;
 
 
-public interface MasterService {
+public interface ContenidoRepartoRolService {
 
-	// REPARTO
-	public EntityResult repartoQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException;
-	public EntityResult repartoInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException;
-	public EntityResult repartoUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
-	public EntityResult repartoDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
+	// CONTENIDO_REPARTO_ROL
+	public EntityResult contenidoRepartoRolQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException;
+	public EntityResult contenidoRepartoRolInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException;
+	public EntityResult contenidoRepartoRolUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
+	public EntityResult contenidoRepartoRolDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
 
 	// ROL
 	public EntityResult rolQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException;
