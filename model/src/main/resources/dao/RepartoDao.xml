@@ -12,4 +12,25 @@
         <Column>reparto_id</Column>
     </UpdateKeys>
     <GeneratedKey>reparto_id</GeneratedKey>
+    <Queries>
+        
+        <Query id="repartoPorRolQuery">
+            <AmbiguousColumns>
+                <AmbiguousColumn name="reparto_id" prefix="reparto"/>
+            </AmbiguousColumns>
+            <Sentence>![CDATA[
+
+                select #COLUMNS# from reparto
+                    inner join contenido_reparto_rol
+                        on reparto.reparto_id = contenido_reparto_rol.reparto_id
+                    inner join rol
+                        on contenido_reparto_rol.rol_id = rol.rol_id
+                #WHERE#
+                #ORDER#
+
+                ]]</Sentence>
+        </Query>
+        
+        
+    </Queries>
 </JdbcEntitySetup>

@@ -12,5 +12,6 @@ public interface IRepartoService {
     public EntityResult repartoInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException;
     public EntityResult repartoUpdate(Map<String, Object> attrMap , Map<String , Object> keyMap) throws OntimizeJEERuntimeException;
     public EntityResult repartoDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
+    public EntityResult repartoPorRolQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException;
 
 }

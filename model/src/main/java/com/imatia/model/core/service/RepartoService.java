@@ -40,4 +40,11 @@ public class RepartoService implements IRepartoService {
     public EntityResult repartoDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
         return this.daoHelper.delete(this.repartoDao, keyMap);
     }
+
+    @Override
+    public EntityResult repartoPorRolQuery(Map<String, Object> keyMap, List<String> attrList){
+
+        return this.daoHelper.query(this.repartoDao, keyMap, attrList, "repartoPorRolQuery");
+
+    }
 }
