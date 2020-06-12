@@ -19,4 +19,7 @@ public interface IContenidoService {
     public EntityResult tipocontenidoUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
     public EntityResult tipocontenidoDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
 
+        //Peliculas más Puntuadas
+    public EntityResult puntuacionMasAlta(Map<String, Object> keyMap,List<String> attrList) throws OntimizeJEERuntimeException;
+
 }
