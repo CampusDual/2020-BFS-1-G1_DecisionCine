@@ -74,6 +74,11 @@ public class ContenidoService implements IContenidoService {
         return this.daoHelper.delete(this.tipoContenidoDao, keyMap);
     }
 
+    // metodo para nuevos estrenos
+    public EntityResult ultimosEstrenosQuery(Map<String, Object> keyMap, List<String> attrList)throws OntimizeJEERuntimeException {
+        return this.daoHelper.query(this.contenidoDao, keyMap, attrList, "SelectUltimosEstrenos");
+    }
+
     //Genero
     @Override
     public EntityResult generoQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException {
