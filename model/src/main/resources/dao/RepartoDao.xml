@@ -18,9 +18,9 @@
             <AmbiguousColumns>
                 <AmbiguousColumn name="reparto_id" prefix="reparto"/>
             </AmbiguousColumns>
-            <Sentence>![CDATA[
+            <Sentence><![CDATA[
 
-                select #COLUMNS# from reparto
+                select distinct on (contenido_reparto_rol.reparto_id) #COLUMNS# from reparto
                     inner join contenido_reparto_rol
                         on reparto.reparto_id = contenido_reparto_rol.reparto_id
                     inner join rol
@@ -28,7 +28,7 @@
                 #WHERE#
                 #ORDER#
 
-                ]]</Sentence>
+                ]]></Sentence>
         </Query>
         
         

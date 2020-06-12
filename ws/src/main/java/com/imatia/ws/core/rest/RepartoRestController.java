@@ -41,7 +41,8 @@ public class RepartoRestController extends ORestController<IRepartoService> {
         try {
 
             List<String> columns = (List<String>) req.get("columns");
-            String rol = (String) req.get("rol");
+            Map<String, Object> filter = (Map<String, Object>) req.get("filter");
+            String rol = (String) filter.get("rol");
             Map<String, Object> key = new HashMap<String, Object>();
             key.put(SQLStatementBuilder.ExtendedSQLConditionValuesProcessor.EXPRESSION_KEY, buscarPorRol(rol));
             res =  this.repartoService.repartoPorRolQuery(key, columns);
