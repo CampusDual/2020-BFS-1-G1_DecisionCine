@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<JdbcEntitySetup xmlns="http://www.ontimize.com/schema/jdbc"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://www.ontimize.com/schema/jdbc http://www.ontimize/jdbc/ontimize-jdbc-dao.xsd"
+                 catalog="" schema="${mainschema}" table="tipo_contenido"
+                 datasource="mainDataSource" sqlhandler="dbSQLStatementHandler">
+
+    <DeleteKeys>
+        <Column>tipo_contenido_id</Column>
+    </DeleteKeys>
+    <UpdateKeys>
+        <Column>tipo_contenido_id</Column>
+    </UpdateKeys>
+    <GeneratedKey>tipo_contenido_id</GeneratedKey>
+</JdbcEntitySetup>
