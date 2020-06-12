@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "66b8d05b-4d9c-4acc-81bf-82fd5c095ce1",
+		"_postman_id": "db17523e-0b77-419c-97b0-2be78a6dc202",
 		"name": "Decision Cine",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -228,6 +228,87 @@
 				}
 			],
 			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "RepartoPorRol",
+			"item": [
+				{
+					"name": "RepartoPorDirector -R (complex)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"filter\": {\r\n        \"rol\": \"director\"\r\n    },\r\n    \"columns\": [\r\n        \"reparto_id\",\r\n        \"reparto_nombre\",\r\n        \"reparto_apellido_1\",\r\n        \"reparto_apellido_2\",\r\n        \"reparto_bibliografia\",\r\n        \"reparto_foto\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:33333/repartos/repartosRol/search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "33333",
+							"path": [
+								"repartos",
+								"repartosRol",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RepartoPorActor -R (complex) Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"filter\": {\r\n        \"rol\": \"actor\"\r\n    },\r\n    \"columns\": [\r\n        \"reparto_id\",\r\n        \"reparto_nombre\",\r\n        \"reparto_apellido_1\",\r\n        \"reparto_apellido_2\",\r\n        \"reparto_bibliografia\",\r\n        \"reparto_foto\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:33333/repartos/repartosRol/search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "33333",
+							"path": [
+								"repartos",
+								"repartosRol",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "basic",
+				"basic": [
+					{
+						"key": "password",
+						"value": "demouser",
+						"type": "string"
+					},
+					{
+						"key": "username",
+						"value": "demo",
+						"type": "string"
+					}
+				]
+			},
+			"protocolProfileBehavior": {}
 		}
 	],
 	"auth": {
@@ -249,7 +330,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "da23bd76-51cd-4551-be67-de10f86ae2cd",
+				"id": "15cdf8e4-d381-4b59-9ce4-cba1cd989fb2",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -259,7 +340,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "e3e834ee-d7cc-4c03-bdf7-c38cabd4982b",
+				"id": "8bf8f0f0-9cc8-4978-896b-69b12f494d17",
 				"type": "text/javascript",
 				"exec": [
 					""
