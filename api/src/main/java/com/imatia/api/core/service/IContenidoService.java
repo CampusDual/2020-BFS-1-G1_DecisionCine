@@ -19,4 +19,11 @@ public interface IContenidoService {
     public EntityResult tipocontenidoUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
     public EntityResult tipocontenidoDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
 
+    // Genero
+    
+    public EntityResult generoQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException;
+    public EntityResult generoInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException;
+    public EntityResult generoUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
+    public EntityResult generoDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
+
 }

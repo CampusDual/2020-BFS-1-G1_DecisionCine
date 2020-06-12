@@ -10,7 +10,7 @@ import com.ontimize.jee.server.rest.ORestController;
 
 
 @RestController
-@RequestMapping("/contenido")
+@RequestMapping("/contenidos")
 @ComponentScan(basePackageClasses = { com.imatia.api.core.service.IContenidoService.class })
 public class ContenidoRestController extends ORestController<IContenidoService> {
 
