@@ -74,7 +74,7 @@ public class ContenidoService implements IContenidoService {
         return this.daoHelper.delete(this.tipoContenidoDao, keyMap);
     }
 
-    //genero
+    //Genero
     @Override
     public EntityResult generoQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException {
         return this.daoHelper.query(this.generoDao, keyMap, attrList);
@@ -95,7 +95,8 @@ public class ContenidoService implements IContenidoService {
         return this.daoHelper.delete(this.generoDao, keyMap);
     }
 
- public EntityResult puntuacionMasAlta(Map<String, Object> keyMap,List<String> attrList) throws OntimizeJEERuntimeException {
-  return this.daoHelper.query(this.contenidoDao, keyMap,attrList,"pelisMasPuntuadas");
- }
+
+    public EntityResult puntuacionMasAlta(Map<String, Object> keyMap,List<String> attrList) throws OntimizeJEERuntimeException {
+        return this.daoHelper.query(this.contenidoDao, keyMap,attrList,"pelisMasPuntuadas");
+    }
 }

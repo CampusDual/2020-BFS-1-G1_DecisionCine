@@ -17,7 +17,8 @@
             <AmbiguousColumns>
                 <AmbiguousColumn name="contenido_id" prefix="contenido"/>
             </AmbiguousColumns>
-            <Sentence><![CDATA[select * from contenido
+            <Sentence><![CDATA[select #COLUMNS# from contenido
+            #WHERE#
             order by contenido_puntuacion desc limit 5]]>
             </Sentence>
         </Query>
