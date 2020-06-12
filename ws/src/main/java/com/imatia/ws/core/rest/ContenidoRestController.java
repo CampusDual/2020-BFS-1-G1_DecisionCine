@@ -18,7 +18,7 @@ import java.util.Map;
 
 
 @RestController
-@RequestMapping("/contenido")
+@RequestMapping("/contenidos")
 @ComponentScan(basePackageClasses = { com.imatia.api.core.service.IContenidoService.class })
 public class ContenidoRestController extends ORestController<IContenidoService> {
 
