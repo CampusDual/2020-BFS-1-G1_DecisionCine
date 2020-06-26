@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { NoticiasRoutingModule } from './noticias-routing.module';
 import { OntimizeWebModule } from 'ontimize-web-ngx';
+import { NoticiasHomeComponent } from './noticias-home/noticias-home.component';
 
 @NgModule({
   imports: [
@@ -10,6 +11,8 @@ import { OntimizeWebModule } from 'ontimize-web-ngx';
     OntimizeWebModule,
     NoticiasRoutingModule
   ],
-  declarations: []
+  declarations: [
+    NoticiasHomeComponent
+  ]
 })
 export class NoticiasModule { }
