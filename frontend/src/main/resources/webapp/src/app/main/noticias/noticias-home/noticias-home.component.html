@@ -1,3 +1,18 @@
-<p>
-  noticias-home works!
-</p>
+<div fxFlex>
+  <o-table
+    fxFlex
+    attr="noticiasTable"
+    service="noticias"
+    entity="noticia"
+    keys="noticia_id"
+    columns="noticia_id;noticia_usuario_id;noticia_descripcion;noticia_fecha_alta;noticia_fecha_modificacion"
+    visible-columns="noticia_id;noticia_usuario_id;noticia_descripcion;noticia_fecha_alta;noticia_fecha_modificacion"
+    query-rows="5"
+  >
+  <o-table-column attr="noticia_id" title="NOTICIAID"></o-table-column>
+  <o-table-column attr="noticia_usuario_id" title="NOTICIAUSUARIOID"></o-table-column>
+  <o-table-column attr="noticia_descripcion" title="NOTICIADESCRIPCION"></o-table-column>
+  <o-table-column attr="noticia_fecha_alta" title="FECHAALTA" type="date" format="LL"></o-table-column>
+    <o-table-column attr="noticia_fecha_modificacion" title="FECHAMODIFICACION" type="date" format="LL"></o-table-column>
+  </o-table>
+</div>
