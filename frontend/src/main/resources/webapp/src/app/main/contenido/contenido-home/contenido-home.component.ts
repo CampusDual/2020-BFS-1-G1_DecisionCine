@@ -11,5 +11,4 @@ export class ContenidoHomeComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }
