@@ -13,5 +13,12 @@
   "ERROR_SESSION_EXPIRED": "La sesi√≥n ha caducado",
   "ERROR_USER_REQUIRED": "Nombre de usuario incorrecto.",
   "ERROR_PASS_REQUIRED": "Contrase√±a incorrecta.",
-  "ERROR_USER_PASS_INCORRECT": "Usuario o contrase√±a incorrecta."
+  "ERROR_USER_PASS_INCORRECT": "Usuario o contrase√±a incorrecta.",
+  "Reparto":"Reparto",
+  "REPARTO_ID": "REPARTO_ID",
+  "NOMBRE" : "NOMBRE",
+  "1∫ APELLIDO": "1∫ APELLIDO",
+  "2∫ APELLIDO":"2∫ APELLIDO",
+  "BIBLIOGRAFIA":"BIBLIOGRAFIA",
+  "FOTOGRAFIA": "FOTOGRAFIA"
 }
