@@ -17,4 +17,11 @@
   "contenido_id": "ID" ,
   "contenido_titulo": "Title" ,
   "contenido_fecha_estreno": "Release date"
+  "Reparto":"Cast",
+  "REPARTO_ID,": "CAST_ID",
+  "NOMBRE" : "NAME",
+  "1º APELLIDO": "1º SURNAME",
+  "2º APELLIDO": "2º SURNAME",
+  "BIBLIOGRAFIA":"BIBLIOGRAPHY",
+  "FOTOGRAFIA":"PHOTOGRAPHY"
 }
