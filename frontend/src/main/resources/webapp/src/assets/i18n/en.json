@@ -14,5 +14,15 @@
   "ERROR_USER_REQUIRED": "Incorrect username.",
   "ERROR_PASS_REQUIRED": "Incorrect password.",
   "ERROR_USER_PASS_INCORRECT": "Invalid username or password.",
-  "NEWS": "News"
+  "NEWS": "News",
+  "contenido_id": "ID",
+  "contenido_titulo": "Title",
+  "contenido_fecha_estreno": "Release date",
+  "Reparto": "Cast",
+  "REPARTO_ID,": "CAST_ID",
+  "NOMBRE" : "NAME",
+  "1º APELLIDO": "1º SURNAME",
+  "2º APELLIDO": "2º SURNAME",
+  "BIBLIOGRAFIA":"BIBLIOGRAPHY",
+  "FOTOGRAFIA":"PHOTOGRAPHY"
 }

@@ -1,0 +1,18 @@
+<div fxFlex>
+<o-table fxFlex 
+	attr="repartoTable" 
+	service="repartos" 
+	entity="reparto" 
+	keys="reparto_id" 
+  columns="reparto_id;reparto_nombre;reparto_apellido_1;reparto_apellido_2;reparto_bibliografia;reparto_foto"
+  visible-columns="reparto_id;reparto_nombre;reparto_apellido_1;reparto_apellido_2;reparto_bibliografia;reparto_foto" 
+  query-rows="5">
+
+<o-table-column attr="reparto_id" title="REPARTO_ID"></o-table-column>
+<o-table-column attr="reparto_nombre" title="NOMBRE"></o-table-column>
+<o-table-column attr="reparto_apellido_1" title="1º APELLIDO"></o-table-column>
+<o-table-column attr="reparto_apellido_2" title="2º APELLIDO"></o-table-column>
+<o-table-column attr="reparto_bibliografia" title="BIBLIOGRAFIA"></o-table-column>
+<o-table-column attr="reparto_foto" title="FOTOGRAFIA" type="image"></o-table-column>
+</o-table>
+</div>
