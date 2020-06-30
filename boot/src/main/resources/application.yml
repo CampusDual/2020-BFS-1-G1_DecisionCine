@@ -54,6 +54,8 @@ ontimize:
          roleNameColumn: ROLENAME
 server:
    port: 33333
+   servlet:
+      context-path: /decision-cine/services/rest
    tomcat:
       uri-encoding: UTF-8
    compression:

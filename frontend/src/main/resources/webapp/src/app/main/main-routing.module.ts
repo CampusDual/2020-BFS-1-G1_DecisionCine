@@ -4,6 +4,7 @@ import { AuthGuardService } from 'ontimize-web-ngx';
 
 import { MainComponent } from './main.component';
 import { HomeModule } from './home/home.module';
+import { NoticiasModule } from './noticias/noticias.module';
 import {ContenidoModule} from "./contenido/contenido.module";
 import {RepartoModule} from "./reparto/reparto.module";
 
@@ -18,6 +19,10 @@ export function loadContenidoModule() {
   return ContenidoModule
 }
 
+export function loadNoticasModule() {
+  return NoticiasModule;
+}
+
 export const routes: Routes = [
   {
     path: '',
@@ -30,9 +35,14 @@ export const routes: Routes = [
         loadChildren: loadHomeModule
       },
       {
+        path: 'noticias',
+        loadChildren: loadNoticasModule
+      },
+      {
         path:  'contenido',
         loadChildren: loadContenidoModule
-	    ,{
+      },
+	    {
         path:  'reparto',
         loadChildren: loadRepartoModule
       }
