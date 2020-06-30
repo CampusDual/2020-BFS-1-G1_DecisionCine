@@ -27,7 +27,6 @@ public class ContenidoService implements IContenidoService {
     @Autowired
     private TipoContenidoDao tipoContenidoDao;
 
-
     // contenido
     @Override
     public EntityResult contenidoQuery(Map<String, Object> keyMap, List<String> attrList)
@@ -99,7 +98,6 @@ public class ContenidoService implements IContenidoService {
     public EntityResult generoDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
         return this.daoHelper.delete(this.generoDao, keyMap);
     }
-
 
     public EntityResult puntuacionMasAlta(Map<String, Object> keyMap,List<String> attrList) throws OntimizeJEERuntimeException {
         return this.daoHelper.query(this.contenidoDao, keyMap,attrList,"pelisMasPuntuadas");
