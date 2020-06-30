@@ -1,3 +1,76 @@
-<p>
-  contenido-detail works!
-</p>
+<o-form
+  service="contenidos"
+  entity="contenido"
+  keys="CUSTOMERID"
+  header-actions="R"
+  show-header-navigation="no"
+>
+  <o-text-input
+    attr="CUSTOMERID"
+    sql-type="INTEGER"
+    enabled="no"
+  ></o-text-input>
+  <o-row>
+    <o-column>
+      <o-image
+        id="CUSTOMER_PHOTO"
+        attr="PHOTO"
+        empty-image="assets/images/no-image.png"
+        sql-type="OTHER"
+      ></o-image>
+    </o-column>
+    <o-column title-label="CUSTOMER_PERSONAL_INFORMATION" fxFlex>
+      <o-row>
+        <o-text-input
+          class="input-padding"
+          attr="NAME"
+          fxFlex="40"
+          required="yes"
+        ></o-text-input>
+        <o-text-input
+          class="input-padding"
+          attr="SURNAME"
+          fxFlex="40"
+          required="yes"
+        ></o-text-input>
+        <o-date-input attr="STARTDATE" fxFlex="20"></o-date-input>
+      </o-row>
+      <o-row>
+        <o-nif-input
+          attr="ID"
+          class="input-padding"
+          fxFlex="40"
+          required="yes"
+        ></o-nif-input>
+        <o-integer-input
+          attr="PHONE"
+          class="input-padding"
+          step="0"
+          grouping="no"
+          fxFlex="40"
+        ></o-integer-input>
+        <o-list-picker
+          attr="CUSTOMERTYPEID"
+          class="input-padding"
+          fxFlex="20"
+          service="customers"
+          entity="customerType"
+          keys="CUSTOMERTYPEID"
+          columns="CUSTOMERTYPEID;DESCRIPTION"
+          visible-columns="DESCRIPTION"
+          value-column="CUSTOMERTYPEID"
+        ></o-list-picker>
+      </o-row>
+      <!-- TODO -->
+      <o-row>
+        <o-email-input attr="EMAIL" fxFlex></o-email-input>
+      </o-row>
+      <o-row>
+        <o-text-input attr="ADDRESS" fxFlex></o-text-input>
+      </o-row>
+      <o-row>
+        <o-textarea-input attr="COMMENTS" fxFlex></o-textarea-input>
+      </o-row>
+    </o-column>
+  </o-row>
+</o-form>

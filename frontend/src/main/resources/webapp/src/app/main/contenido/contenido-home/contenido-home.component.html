@@ -1,7 +1,21 @@
-<div fxFlex>
-  <o-table fxFlex attr="contenidoTable" service="contenidos" entity="contenido" keys="contenido_id"
-           columns="contenido_id;contenido_genero_id;contenido_tipo_contenido_id;contenido_titulo;contenido_sinopsis;
+<o-form-layout-manager
+  title="{{ 'contenido_titulo' | oTranslate }}"
+  separator=" "
+  mode="tab"
+  label-columns="contenido_titulo"
+>
+  <div fxFlex>
+    <o-table
+      fxFlex
+      attr="contenidoTable"
+      service="contenidos"
+      entity="contenido"
+      keys="contenido_id"
+      columns="contenido_id;contenido_genero_id;contenido_tipo_contenido_id;contenido_titulo;contenido_sinopsis;
               contenido_duracion;contenido_puntuacion;contenido_fecha_estreno;contenido_capitulos;contenido_foto"
-           visible-columns="contenido_id;contenido_titulo;contenido_fecha_estreno" query-rows="20">
-  </o-table>
-</div>
+      visible-columns="contenido_id;contenido_titulo;contenido_fecha_estreno"
+      query-rows="20"
+    >
+    </o-table>
+  </div>
+</o-form-layout-manager>
