@@ -1,0 +1,1270 @@
+{
+	"info": {
+		"_postman_id": "e6686ec6-ad00-4d19-bffc-97047bdc790a",
+		"name": "BD Decision Cine",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Comentarios",
+			"item": [
+				{
+					"name": "C Comentarios",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "demouser",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\" : {\n\t\t\"contenido_id\": 8,\n\t\t\"usuario_id\": 7,\n\t\t\"descripcion\": \"prueba 1\",\n\t\t\"fecha\": \"2020-06-09\"\n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:33333/comentarios/comentario",
+							"host": [
+								"localhost"
+							],
+							"port": "33333",
+							"path": [
+								"comentarios",
+								"comentario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "R Comentarios",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "demouser",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"comentario_id\": \"11\",\n\t\"contenido_id\": \"7\",\n\t\"usuario_id\": \"8\",\n\t\"descripcion\": \"prueba 1\",\n\t\"fecha\": \"2020-06-08\"\n}\t",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "localhost:33333/comentarios/comentario?columns=comentario_id,contenido_id,usuario_id,descripcion,fecha",
+							"host": [
+								"localhost"
+							],
+							"port": "33333",
+							"path": [
+								"comentarios",
+								"comentario"
+							],
+							"query": [
+								{
+									"key": "columns",
+									"value": "comentario_id,contenido_id,usuario_id,descripcion,fecha"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "U Comentarios",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "demouser",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"filter\": {\r\n        \"comentario_id\": 11\r\n    },\r\n    \"data\":{\r\n        \"descripcion\": \"descripcion actualizada despues de update\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:33333/comentarios/comentario",
+							"host": [
+								"localhost"
+							],
+							"port": "33333",
+							"path": [
+								"comentarios",
+								"comentario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "D Comentarios",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "demouser",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"filter\": {\r\n        \"comentario_id\": 11\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:33333/comentarios/comentario",
+							"host": [
+								"localhost"
+							],
+							"port": "33333",
+							"path": [
+								"comentarios",
+								"comentario"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Contenido",
+			"item": [
+				{
+					"name": "C insert de contenido",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "demouser",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"data\": {\r\n  \r\n\t\"contenido_genero_id\":\"2\",\r\n\t\"contenido_tipo_contenido_id\":\"1\" ,\r\n\t\"contenido_titulo\": \"la paloma\", \r\n\t\"contenido_sinopsis\":\"blablabla\", \r\n\t\"contenido_duracion\":\"129\",\r\n\t\"contenido_puntuacion\":\"5\",\r\n\t\"contenido_fecha_estreno\":\"2020-10-15\",\r\n\t\"contenido_capitulos\":\"1\",\r\n\t\"contenido_foto\":\"https://picsum.photos/200/300\"\r\n\r\n        }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:33333/contenidos/contenido",
+							"host": [
+								"localhost"
+							],
+							"port": "33333",
+							"path": [
+								"contenidos",
+								"contenido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "R select de contenido",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "demouser",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:33333/contenidos/contenido?columns=contenido_id,contenido_genero_id,contenido_titulo,contenido_fecha_estreno",
+							"host": [
+								"localhost"
+							],
+							"port": "33333",
+							"path": [
+								"contenidos",
+								"contenido"
+							],
+							"query": [
+								{
+									"key": "columns",
+									"value": "contenido_id,contenido_genero_id,contenido_titulo,contenido_fecha_estreno"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "U update de contenido",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "demouser",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"filter\": {\r\n        \t\"contenido_id\":11\r\n            \r\n        },\r\n        \t\"data\":{\r\n        \t\r\n        \t\"contenido_titulo\": \"el negro\"\r\n        }\t\r\n    \r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:33333/contenidos/contenido",
+							"host": [
+								"localhost"
+							],
+							"port": "33333",
+							"path": [
+								"contenidos",
+								"contenido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "D delete de contenido",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "demouser",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"filter\": {\r\n        \t\"contenido_id\":11\r\n            \r\n        }\t\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:33333/contenidos/contenido",
+							"host": [
+								"localhost"
+							],
+							"port": "33333",
+							"path": [
+								"contenidos",
+								"contenido"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Noticias",
+			"item": [
+				{
+					"name": "noticia -C",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "demouser",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"noticia_usuario_id\": 1,\n        \"noticia_descripcion\": \"descripcion de prueba en peti POST C\",\n        \"noticia_fecha_alta\": \"2020-02-01\"\n    },\n    \"sqltypes\": {\n        \"noticia_id\": 4,\n        \"noticia_usuario_id\": 4,\n        \"noticia_descripcion\": 12,\n        \"noticia_fecha_alta\": 91,\n        \"noticia_fecha_modificacion\": 91\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:33333/noticias/noticia",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "33333",
+							"path": [
+								"noticias",
+								"noticia"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "noticia -R",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "demouser",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:33333/noticias/noticia?columns=noticia_id,noticia_usuario_id,noticia_descripcion,noticia_fecha_alta,noticia_fecha_modificacion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "33333",
+							"path": [
+								"noticias",
+								"noticia"
+							],
+							"query": [
+								{
+									"key": "columns",
+									"value": "noticia_id,noticia_usuario_id,noticia_descripcion,noticia_fecha_alta,noticia_fecha_modificacion"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "noticia -R (complex)",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "demouser",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"filter\": {\n    \t\"noticia_id\": 1\n    },\n    \"columns\": [\n        \"noticia_id\",\n        \"noticia_usuario_id\",\n        \"noticia_descripcion\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:33333/noticias/noticia/search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "33333",
+							"path": [
+								"noticias",
+								"noticia",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "noticia -U",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "demouser",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"filter\" :{\n\t\t\"noticia_id\" :1\n\t},\n    \"data\": {\n        \"noticia_descripcion\": \"descripcion de prueba en peti PUT U\"\n    },\n    \"sqltypes\": {\n        \"noticia_id\": 4,\n        \"noticia_usuario_id\": 4,\n        \"noticia_descripcion\": 12,\n        \"noticia_fecha_alta\": 91,\n        \"noticia_fecha_modificacion\": 91\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:33333/noticias/noticia",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "33333",
+							"path": [
+								"noticias",
+								"noticia"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "noticia -D",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "demouser",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"filter\" :{\n\t\t\"noticia_id\" :13\n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:33333/noticias/noticia",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "33333",
+							"path": [
+								"noticias",
+								"noticia"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Reparto",
+			"item": [
+				{
+					"name": "C Reparto",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "demouser",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"data\" : {\r\n\t\t\"reparto_id\": 21,\r\n\t\t\"reparto_nombre\": \"Pepe\",\r\n\t\t\"reparto_apellido_1\": \"Portela\",\r\n\t\t\"reparto_apellido_2\": \"Gómez\",\r\n\t\t\"reparto_bibliografia\": \"bibliografia 1\",\r\n        \"reparto_foto\": \"https://picsum.photos/200/300\"\r\n\t}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:33333/repartos/reparto",
+							"host": [
+								"localhost"
+							],
+							"port": "33333",
+							"path": [
+								"repartos",
+								"reparto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "R  Reparto",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:33333/repartos/reparto?columns=reparto_id,reparto_nombre,reparto_apellido_1,reparto_apellido_2,reparto_bibliografia,reparto_foto",
+							"host": [
+								"localhost"
+							],
+							"port": "33333",
+							"path": [
+								"repartos",
+								"reparto"
+							],
+							"query": [
+								{
+									"key": "columns",
+									"value": "reparto_id,reparto_nombre,reparto_apellido_1,reparto_apellido_2,reparto_bibliografia,reparto_foto"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "U Reparto",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "demouser",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"filter\": {\r\n        \"reparto_id\": 21\r\n    },\r\n    \"data\":{\r\n        \"reparto_nombre\": \"nombre actualizado\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:33333/repartos/reparto",
+							"host": [
+								"localhost"
+							],
+							"port": "33333",
+							"path": [
+								"repartos",
+								"reparto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "D Reparto",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "demouser",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"filter\": {\r\n        \"reparto_id\": 24\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:33333/repartos/reparto",
+							"host": [
+								"localhost"
+							],
+							"port": "33333",
+							"path": [
+								"repartos",
+								"reparto"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "TipoContenido",
+			"item": [
+				{
+					"name": "C TipoContenido",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "demouser",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"data\" : {\r\n\t\t\"tipo_contenido_nombre\": \"prueba 1\"\r\n\r\n\t}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:33333/contenidos/tipocontenido",
+							"host": [
+								"localhost"
+							],
+							"port": "33333",
+							"path": [
+								"contenidos",
+								"tipocontenido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "R TipoContenido",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "demouser",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:33333/contenidos/tipocontenido?columns=tipo_contenido_id,tipo_contenido_nombre",
+							"host": [
+								"localhost"
+							],
+							"port": "33333",
+							"path": [
+								"contenidos",
+								"tipocontenido"
+							],
+							"query": [
+								{
+									"key": "columns",
+									"value": "tipo_contenido_id,tipo_contenido_nombre"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "U TipoContenido",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "demouser",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"filter\": {\r\n        \"tipo_contenido_id\": 4\r\n    },\r\n    \"data\":{\r\n        \"tipo_contenido_nombre\": \"nombre tipo contenido actualizado\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:33333/contenidos/tipocontenido",
+							"host": [
+								"localhost"
+							],
+							"port": "33333",
+							"path": [
+								"contenidos",
+								"tipocontenido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "D TipoContenido",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "demouser",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"filter\": {\r\n        \"tipo_contenido_id\": 4\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:33333/contenidos/tipocontenido",
+							"host": [
+								"localhost"
+							],
+							"port": "33333",
+							"path": [
+								"contenidos",
+								"tipocontenido"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "TipoGenero",
+			"item": [
+				{
+					"name": "C insert de contenido/genero",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "demouser",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"data\": {\r\n\t\"genero_nombre\":\"distopica\"\r\n } ,\r\n    \"sqltypes\": {\r\n        \"genero_nombre\": 12\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:33333/contenidos/genero",
+							"host": [
+								"localhost"
+							],
+							"port": "33333",
+							"path": [
+								"contenidos",
+								"genero"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "R select de contenido/genero",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "demouser",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:33333/contenidos/genero?columns=genero_id,genero_nombre",
+							"host": [
+								"localhost"
+							],
+							"port": "33333",
+							"path": [
+								"contenidos",
+								"genero"
+							],
+							"query": [
+								{
+									"key": "columns",
+									"value": "genero_id,genero_nombre"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "U update de contenido/genero",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"filter\": {\r\n        \t\"genero_id\":18\r\n            \r\n        },\r\n        \t\"data\":{\r\n        \t\r\n        \t\"genero_nombre\": \"prueba\"\r\n        }\t\r\n    \r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:33333/contenidos/genero",
+							"host": [
+								"localhost"
+							],
+							"port": "33333",
+							"path": [
+								"contenidos",
+								"genero"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "D delete de contenido/genero",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"filter\": {\r\n        \t\"genero_id\":18\r\n            \r\n        }\t\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:33333/contenidos/genero",
+							"host": [
+								"localhost"
+							],
+							"port": "33333",
+							"path": [
+								"contenidos",
+								"genero"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Contenido más puntuado",
+			"item": [
+				{
+					"name": "Peliculas más puntuadas",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "demouser",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"columns\":[\r\n        \"contenido_id\",\r\n        \"contenido_titulo\",\r\n        \"contenido_puntuacion\"\r\n\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:33333/contenidos/puntuadas",
+							"host": [
+								"localhost"
+							],
+							"port": "33333",
+							"path": [
+								"contenidos",
+								"puntuadas"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Contenido ultimos estrenos",
+			"item": [
+				{
+					"name": "R select de ultimos estrenos",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "demouser",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"columns\":[\r\n    \"contenido_genero_id\",\r\n\t\"contenido_tipo_contenido_id\",\r\n    \"contenido_titulo\",\r\n\t\"contenido_sinopsis\",\r\n\t\"contenido_duracion\",\r\n\t\"contenido_puntuacion\",\r\n\t\"contenido_fecha_estreno\",\r\n\t\"contenido_capitulos\",\r\n\t\"contenido_foto\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:33333/contenidos/ultimosEstrenos",
+							"host": [
+								"localhost"
+							],
+							"port": "33333",
+							"path": [
+								"contenidos",
+								"ultimosEstrenos"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "RepartoPorRol",
+			"item": [
+				{
+					"name": "RepartoPorDirector -R (complex)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"filter\": {\r\n        \"rol\": \"director\"\r\n    },\r\n    \"columns\": [\r\n        \"reparto_id\",\r\n        \"reparto_nombre\",\r\n        \"reparto_apellido_1\",\r\n        \"reparto_apellido_2\",\r\n        \"reparto_bibliografia\",\r\n        \"reparto_foto\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:33333/repartos/repartosRol/search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "33333",
+							"path": [
+								"repartos",
+								"repartosRol",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RepartoPorActor -R (complex) Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"filter\": {\r\n        \"rol\": \"actor\"\r\n    },\r\n    \"columns\": [\r\n        \"reparto_id\",\r\n        \"reparto_nombre\",\r\n        \"reparto_apellido_1\",\r\n        \"reparto_apellido_2\",\r\n        \"reparto_bibliografia\",\r\n        \"reparto_foto\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:33333/repartos/repartosRol/search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "33333",
+							"path": [
+								"repartos",
+								"repartosRol",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "basic",
+				"basic": [
+					{
+						"key": "password",
+						"value": "demouser",
+						"type": "string"
+					},
+					{
+						"key": "username",
+						"value": "demo",
+						"type": "string"
+					}
+				]
+			},
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Prueba Contenido",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
