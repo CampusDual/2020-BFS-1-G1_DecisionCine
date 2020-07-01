@@ -1,62 +1,24 @@
- <!--
-<div fxFlex>
-  <o-table fxFlex 
-  		attr="contenidoTable" 
-  		service="contenidos" 
-  		entity="contenido" 
-  		keys="contenido_id"          
-		columns="contenido_id;contenido_genero_id;contenido_tipo_contenido_id;contenido_titulo;contenido_sinopsis;
-         contenido_duracion;contenido_puntuacion;contenido_fecha_estreno;contenido_capitulos;contenido_foto"
-		visible-columns="contenido_id;contenido_titulo;contenido_fecha_estreno" 
-		query-rows="20">
-
- <o-table-columns-filter columns="contenido_titulo;contenido_fecha_estreno"></o-table-columns-filter>
- 
-  </o-table>
-</div>
-
--->
-
-
-<o-grid #grid columns="contenido_id;contenido_genero_id; contenido_tipo_contenido_id;
+<o-grid #grid 
+	columns="contenido_id;contenido_genero_id; contenido_tipo_contenido_id;
 contenido_titulo;contenido_sinopsis;contenido_duracion;contenido_puntuacion;contenido_fecha_estreno;
-contenido_capitulos;" keys="contenido_id" show-page-size="no" page-size-options="24;32;64" quick-filter="true" >
-  <o-grid-item *ngFor="let list of contenido">
+contenido_capitulos; contenido_foto" 
+	keys="contenido_id" 
+	show-page-size="yes" 
+	page-size-options="4;8;16" 
+	quick-filter="true" 
+	service="contenidos" 
+  	entity="contenido" 
+  	grid-item-height="1:1.3">
+  	
+ 	 <o-grid-item *ngFor="let list of grid.dataArray">
     <o-column layout-padding class="container-item">
      
-      <h4> {{list}} </h4>
-      
-      <div class="contenido_genero_id">
-        <p>{{ list }}</p>
-      </div>
-      
-      <div class="contenido_tipo_contenido_id">
-        <p>{{ list }}</p>
-      </div>
-      
-      <div class="contenido_titulo">
-        <p>{{ list }}</p>
-      </div>
-      
-      <div class="contenido_sinopsis">
-        <p>{{ list }}</p>
-      </div>
-      
-      <div class="contenido_duracion">
-        <p>{{ list }}</p>
-      </div>
-      
-      <div class="contenido_puntuacion">
-        <p>{{ list }}</p>
-      </div>
-      
-      <div class="contenido_fecha_estreno">
-        <p>{{ list }}</p>
-      </div>
-      
-      <div class="contenido_capitulos">
-        <p>{{ list }}</p>
-      </div>      
+    <img [src]="UrlFoto" style="margin-top:8px">
+    
+     
+      <h4> {{list.contenido_titulo}} </h4>
+     
+     
     </o-column>
   </o-grid-item>
 </o-grid>
