@@ -7,6 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContenidoHomeComponent implements OnInit {
 
+	public contenido:string []=[
+"contenido_id",
+"contenido_genero_id",
+"contenido_tipo_contenido_id",
+"contenido_titulo",
+"contenido_sinopsis",
+"contenido_duracion",
+"contenido_puntuacion",
+"contenido_fecha_estreno",
+"contenido_capitulos"
+];
+
   constructor() { }
 
   ngOnInit() {

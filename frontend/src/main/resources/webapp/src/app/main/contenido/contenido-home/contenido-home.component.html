@@ -1,7 +1,62 @@
+ <!--
 <div fxFlex>
-  <o-table fxFlex attr="contenidoTable" service="contenidos" entity="contenido" keys="contenido_id"
-           columns="contenido_id;contenido_genero_id;contenido_tipo_contenido_id;contenido_titulo;contenido_sinopsis;
-              contenido_duracion;contenido_puntuacion;contenido_fecha_estreno;contenido_capitulos;contenido_foto"
-           visible-columns="contenido_id;contenido_titulo;contenido_fecha_estreno" query-rows="20">
+  <o-table fxFlex 
+  		attr="contenidoTable" 
+  		service="contenidos" 
+  		entity="contenido" 
+  		keys="contenido_id"          
+		columns="contenido_id;contenido_genero_id;contenido_tipo_contenido_id;contenido_titulo;contenido_sinopsis;
+         contenido_duracion;contenido_puntuacion;contenido_fecha_estreno;contenido_capitulos;contenido_foto"
+		visible-columns="contenido_id;contenido_titulo;contenido_fecha_estreno" 
+		query-rows="20">
+
+ <o-table-columns-filter columns="contenido_titulo;contenido_fecha_estreno"></o-table-columns-filter>
+ 
   </o-table>
 </div>
+
+-->
+
+
+<o-grid #grid columns="contenido_id;contenido_genero_id; contenido_tipo_contenido_id;
+contenido_titulo;contenido_sinopsis;contenido_duracion;contenido_puntuacion;contenido_fecha_estreno;
+contenido_capitulos;" keys="contenido_id" show-page-size="no" page-size-options="24;32;64" quick-filter="true" >
+  <o-grid-item *ngFor="let list of contenido">
+    <o-column layout-padding class="container-item">
+     
+      <h4> {{list}} </h4>
+      
+      <div class="contenido_genero_id">
+        <p>{{ list }}</p>
+      </div>
+      
+      <div class="contenido_tipo_contenido_id">
+        <p>{{ list }}</p>
+      </div>
+      
+      <div class="contenido_titulo">
+        <p>{{ list }}</p>
+      </div>
+      
+      <div class="contenido_sinopsis">
+        <p>{{ list }}</p>
+      </div>
+      
+      <div class="contenido_duracion">
+        <p>{{ list }}</p>
+      </div>
+      
+      <div class="contenido_puntuacion">
+        <p>{{ list }}</p>
+      </div>
+      
+      <div class="contenido_fecha_estreno">
+        <p>{{ list }}</p>
+      </div>
+      
+      <div class="contenido_capitulos">
+        <p>{{ list }}</p>
+      </div>      
+    </o-column>
+  </o-grid-item>
+</o-grid>
