@@ -1,7 +1,10 @@
 package com.imatia.ws.core.rest;
 
 
-import com.ontimize.db.EntityResult;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.http.MediaType;
@@ -9,12 +12,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import com.imatia.api.core.service.IContenidoService;
-import com.ontimize.jee.server.rest.ORestController;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import com.imatia.api.core.service.IContenidoService;
+import com.ontimize.db.EntityResult;
+import com.ontimize.jee.server.rest.ORestController;
 
 
 @RestController
@@ -57,5 +58,4 @@ public class ContenidoRestController extends ORestController<IContenidoService> 
             return res;
         }
     }
-    
 }
