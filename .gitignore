@@ -24,3 +24,5 @@ model/src/main/db/*.log
 model/src/main/db/*.properties
 model/src/main/db/*.script
 model/src/main/db/*.tmp
+
+*package-lock.json
