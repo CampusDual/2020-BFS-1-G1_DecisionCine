@@ -58,5 +58,4 @@ public class ContenidoRestController extends ORestController<IContenidoService> 
             return res;
         }
     }
-    
 }
