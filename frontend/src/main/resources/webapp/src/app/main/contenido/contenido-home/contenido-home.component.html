@@ -1,7 +1,7 @@
 <o-grid #grid 
-	columns="contenido_id;contenido_genero_id; contenido_tipo_contenido_id;
+	columns="contenido_id;contenido_genero_id;contenido_tipo_contenido_id;
 contenido_titulo;contenido_sinopsis;contenido_duracion;contenido_puntuacion;contenido_fecha_estreno;
-contenido_capitulos; contenido_foto" 
+contenido_capitulos;contenido_foto" 
 	keys="contenido_id" 
 	show-page-size="yes" 
 	page-size-options="4;8;16" 
@@ -13,7 +13,9 @@ contenido_capitulos; contenido_foto"
  	 <o-grid-item *ngFor="let list of grid.dataArray">
     <o-column layout-padding class="container-item">
      
-    <img [src]="UrlFoto" style="margin-top:8px">
+    <!-- <img src="{{list.contenido_foto}}" style="margin-top:8px"> -->
+    <o-image data="{{list.contenido_foto}}" style="margin-top:8px" show-controls="false"></o-image>
+    <!-- <img [src]="UrlFoto" style="margin-top:8px"> -->
     
      
       <h4> {{list.contenido_titulo}} </h4>
