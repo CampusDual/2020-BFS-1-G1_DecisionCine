@@ -1,1 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
+
+mat-icon.sidenav-toggle.mat-icon {
+  display: none;
+}
+
+#menuSuperior{
+  height:6.5%;
+}
+
+#opcionesMenu{
+  width: 80%;
+  height: 20%;
+}
+#buscadorSuperior{
+  margin-left: 30px;
+  margin-right: 100px;
+  float: left;
+}
+
+.mat-toolbar.mat-primary {
+  background: black;
+  height: 62px;
+}
+
+.o-bar-menu nav a {
+  color: darkgoldenrod;
+}
+
+.mat-toolbar-row, .mat-toolbar-single-row {
+  height: 62px;
+}
+
+mat-icon.sidenav-toggle.mat-icon {
+  display: none;
+}
+
+.mat-form-field-flex {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  margin-top: 20px;
+  color: darkgoldenrod;
+
+}
+
+o-bar-menu-nested {
+  margin-left: 200px;
+}
+
+
+
