@@ -1,3 +1,11 @@
-<o-app-layout>
-  <router-outlet></router-outlet>
-</o-app-layout>
+<o-app-header id="menuSuperior" use-flag-icons="yes" mat-icon>
+
+  <o-bar-menu title="MENU" id="opcionesMenu"></o-bar-menu>
+  <o-list-picker id="buscadorSuperior" attr="Contenido a buscar" oLocker  read-only="no" service="contenidos"
+                 entity="contenido" columns="contenido_id;contenido_genero_id;contenido_tipo_contenido_id;contenido_titulo;contenido_sinopsis;
+                   contenido_duracion;contenido_puntuacion;contenido_fecha_estreno;contenido_capitulos;contenido_foto" value-column="contenido_titulo"
+                 keys="contenido_id" visible-columns="contenido_titulo" width="30%">
+  </o-list-picker>
+</o-app-header>
+
+<router-outlet></router-outlet>
