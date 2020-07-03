@@ -1,3 +1,20 @@
-<p>
-  contenido-detail works!
-</p>
+<o-grid
+  #grid
+  attr="grid"
+  columns="contenido_id;contenido_titulo;contenido_sinopsis;contenido_foto"
+  keys="contenido_id"
+  parent-keys="contenido_id"
+  service="contenidos"
+  entity="contenido"
+  controls="no"
+  cols="4"
+>
+  <o-grid-item colspan="1" rowspan="1">
+    <div fxFill class="fondoAzulItemGrid"></div>
+  </o-grid-item>
+  <o-grid-item colspan="3" rowspan="1">
+    <div fxFill class="fondoAzulItemGrid">
+      <p>aqui: {{ grid.dataArray }}</p>
+    </div>
+  </o-grid-item>
+</o-grid>
