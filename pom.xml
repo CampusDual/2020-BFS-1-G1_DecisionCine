@@ -14,8 +14,8 @@
 	<packaging>pom</packaging>
 
 	<properties>
-		<ontimize.boot.version>2.0.0</ontimize.boot.version>
-		<ontimize.jee.version>2.0.0</ontimize.jee.version>
+		<ontimize.boot.version>2.1.1</ontimize.boot.version>
+		<ontimize.jee.version>2.1.1</ontimize.jee.version>
 		<basicproject.version>0.0.1</basicproject.version>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<maven.compiler.source>1.8</maven.compiler.source>

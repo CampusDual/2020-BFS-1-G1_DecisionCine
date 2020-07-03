@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContenidoHomeComponent implements OnInit {
 
+public UrlFoto:string = "https://picsum.photos/200/300";
+
+
+
   constructor() { }
 
   ngOnInit() {
