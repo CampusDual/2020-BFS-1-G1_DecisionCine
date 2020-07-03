@@ -1,7 +1,7 @@
 <o-form editable-detail="no" show-header="no" class="contenidos-filters-form" fxFill>
 <o-column>
  <o-combo
-    	attr="CONTENIDOTITULO" 
+    	attr="Filtro por Titulo" 
     	read-only="no" 
     	service="contenidos" 
     	entity="contenido" 
@@ -11,8 +11,23 @@
       	visible-columns="contenido_titulo" 
       	fxFlex="20">
     </o-combo>
+     <o-combo
+    	attr="Filtro por genero" 
+    	read-only="no" 
+    	service="contenidos" 
+    	entity="contenido" 
+    	columns="contenido_id;contenido_genero_id"
+      	value-column="contenido_genero_id" 
+      	keys="contenido_id" 
+      	visible-columns="contenido_genero_id" 
+      	fxFlex="20">
+    </o-combo>
    <o-row layout-align="end">
- <o-button attr="filter" [oFilterBuilderQuery]="filterBuilder" type="RAISED" label="Filter" 
+ <o-button 
+	 attr="filter" 
+	 [oFilterBuilderQuery]="filterBuilder" t
+	 ype="RAISED" 
+	 label="Filter" 
     >
 </o-button>
 <o-button 
@@ -27,7 +42,7 @@
 
    <o-filter-builder #filterBuilder 
 	attr="thefilter" 
-  	filters="contenido_id:CONTENIDOTITULO" 
+  	filters="contenido_titulo:Filtro por Titulo;contenido_genero_id:Filtro por genero" 
   	[target]="grid"
     [expression-builder]="createFilter">
     </o-filter-builder>

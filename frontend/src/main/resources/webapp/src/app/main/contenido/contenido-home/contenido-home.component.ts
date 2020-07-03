@@ -17,7 +17,7 @@ public UrlFoto:string = "https://picsum.photos/200/300";
     let filters: Array<IExpression> = [];
     values.forEach(fil => {
       if (fil.value) {
-        if (fil.attr === 'contenido_titulo' || fil.attr === 'contenido_duracion') {
+        if (fil.attr === 'contenido_titulo' || fil.attr === 'contenido_titulo') {
           filters.push(FilterExpressionUtils.buildExpressionLike(fil.attr, fil.value));
         }
         if (fil.attr === 'contenido_id') {
