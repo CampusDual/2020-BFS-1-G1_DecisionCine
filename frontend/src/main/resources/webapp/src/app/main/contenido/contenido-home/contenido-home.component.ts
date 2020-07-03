@@ -9,7 +9,7 @@ import { FilterExpressionUtils, IExpression } from 'ontimize-web-ngx';
 })
 export class ContenidoHomeComponent implements OnInit {
 
-public UrlFoto:string = "https://picsum.photos/200/300";
+//public UrlFoto:string = "https://picsum.photos/200/300";
     
    
 	public  createFilter(values: Array<{ attr, value }>): IExpression {
