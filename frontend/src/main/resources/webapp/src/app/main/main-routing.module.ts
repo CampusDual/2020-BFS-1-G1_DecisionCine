@@ -45,6 +45,11 @@ export const routes: Routes = [
 	    {
         path:  'reparto',
         loadChildren: loadRepartoModule
+      },
+      {
+        path: 'contenido_id',
+        //component: ruta Contenido detalle componente
+
       }
     ]
   }
