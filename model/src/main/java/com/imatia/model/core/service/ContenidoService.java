@@ -99,7 +99,7 @@ public class ContenidoService implements IContenidoService {
         return this.daoHelper.delete(this.generoDao, keyMap);
     }
 
-    public EntityResult puntuacionMasAlta(Map<String, Object> keyMap,List<String> attrList) throws OntimizeJEERuntimeException {
+    public EntityResult puntuadasQuery(Map<String, Object> keyMap,List<String> attrList) throws OntimizeJEERuntimeException {
         return this.daoHelper.query(this.contenidoDao, keyMap,attrList,"pelisMasPuntuadas");
     }
 }

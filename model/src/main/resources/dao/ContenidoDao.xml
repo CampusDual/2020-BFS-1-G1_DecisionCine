@@ -16,14 +16,11 @@
     	<Query id="SelectUltimosEstrenos">
     		<Sentence> <![CDATA[select #COLUMNS# from contenido
     		#WHERE#
-    		order by contenido_fecha_estreno desc limit 4]]>
+    		order by contenido_fecha_estreno desc limit 5]]>
     		</Sentence>
     	</Query>
 
         <Query id="pelisMasPuntuadas">
-            <AmbiguousColumns>
-                <AmbiguousColumn name="contenido_id" prefix="contenido"/>
-            </AmbiguousColumns>
             <Sentence><![CDATA[select #COLUMNS# from contenido
             #WHERE#
             order by contenido_puntuacion desc limit 5]]>

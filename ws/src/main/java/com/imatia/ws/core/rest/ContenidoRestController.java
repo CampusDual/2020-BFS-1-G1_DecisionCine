@@ -50,7 +50,7 @@ public class ContenidoRestController extends ORestController<IContenidoService> 
         try{
             List<String> columns = (List<String>)req.get("columns");
             Map<String,Object> key = new HashMap<String,Object>();
-            return contenidoService.puntuacionMasAlta(key,columns);
+            return contenidoService.puntuadasQuery(key,columns);
         }catch(Exception e){
             e.printStackTrace();
             EntityResult res = new EntityResult();
