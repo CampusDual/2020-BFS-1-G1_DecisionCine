@@ -1,7 +1,9 @@
 <o-form editable-detail="no" show-header="no" class="contenidos-filters-form" fxFill>
 <o-column>
+<div class="filtros">
+<div class="buscar_por_titulo">
  <o-combo
-    	attr="Filtro por Titulo" 
+    	attr="Buscar por Titulo" 
     	read-only="no" 
     	service="contenidos" 
     	entity="contenido" 
@@ -9,10 +11,12 @@
       	value-column="contenido_id" 
       	keys="contenido_id" 
       	visible-columns="contenido_titulo" 
-      	fxFlex="30">
+      	fxFlex="90">
     </o-combo>
+  </div>
+ <div class="buscar_por_genero">   
     <o-combo
-    	attr="Filtro por genero" 
+    	attr="Buscar por genero" 
     	read-only="no" 
     	service="contenidos" 
     	entity="contenido" 
@@ -20,10 +24,12 @@
       	value-column="contenido_genero_id" 
       	keys="contenido_id" 
       	visible-columns="contenido_genero_id" 
-      	fxFlex="30">
+      	fxFlex="90">
     </o-combo>
+</div>
+<div class="buscar_por_tipo">
     <o-combo
-    	attr="Filtro por tipo(pelicula/serie/documental)" 
+    	attr="Buscar por tipo(pelicula/serie/documental)" 
     	read-only="no" 
     	service="contenidos" 
     	entity="contenido" 
@@ -31,13 +37,14 @@
       	value-column="contenido_tipo_contenido_id" 
       	keys="contenido_id" 
       	visible-columns="contenido_tipo_contenido_id" 
-      	fxFlex="30">
+      	fxFlex="90">
     </o-combo>
-    
+    </div>
+    </div>
    	<o-row layout-align="end">
  		<o-button 
 	 		attr="filter" 
-	 		[oFilterBuilderQuery]="filterBuilder" t
+	 		[oFilterBuilderQuery]="filterBuilder" 
 	 		type="RAISED" 
 	 		label="Filter">
 		</o-button>
@@ -52,7 +59,7 @@
 
    <o-filter-builder #filterBuilder 
 		attr="thefilter" 
-	  	filters="contenido_titulo:Filtro por Titulo;contenido_genero_id:Filtro por genero;contenido_tipo_contenido_id:Filtro por tipo(pelicula/serie/documental)" 
+	  	filters="contenido_titulo:Buscar por Titulo;contenido_genero_id:Buscar por genero;contenido_tipo_contenido_id:Buscar por tipo(pelicula/serie/documental)" 
 	  	[target]="grid"
 	    [expression-builder]="createFilter">
    </o-filter-builder>
