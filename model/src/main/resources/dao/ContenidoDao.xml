@@ -16,7 +16,7 @@
     	<Query id="SelectUltimosEstrenos">
     		<Sentence> <![CDATA[select #COLUMNS# from contenido
     		#WHERE#
-    			order by contenido_fecha_estreno desc limit 4]]>   	
+    		order by contenido_fecha_estreno desc limit 4]]>
     		</Sentence>
     	</Query>
 

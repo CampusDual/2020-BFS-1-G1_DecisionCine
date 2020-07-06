@@ -1,5 +1,25 @@
 <div fxLayout="row" layout-padding fxLayoutAlign="center center">
-  <p>
-    Ontimize web seed application home component
-  </p>
+
+  <div id="masPuntuadas" style="background-color: #3498db">
+    <h1>Más Puntuadas</h1>
+    <o-grid #grid
+            columns="contenido_id;contenido_genero_id;contenido_tipo_contenido_id;
+            contenido_titulo;contenido_sinopsis;contenido_duracion;contenido_puntuacion;contenido_fecha_estreno;
+            contenido_capitulos;contenido_foto"
+            keys="contenido_id"
+            service="contenidos"
+            entity="puntuadas"
+            grid-item-height="1:1.3">
+
+
+      <o-grid-item *ngFor="let list of grid.dataArray">
+        <o-column layout-padding class="container-item" style="background-color: green">
+          <o-image data="{{list.contenido_foto}}" style="margin-top:8px" show-controls="false"></o-image>
+
+          <h4> {{list.contenido_titulo}} </h4>
+        </o-column>
+      </o-grid-item>
+    </o-grid>
+  </div>
+
 </div>
