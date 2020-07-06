@@ -3,7 +3,6 @@
   attr="grid"
   columns="contenido_id;contenido_titulo;contenido_sinopsis;contenido_foto"
   keys="contenido_id"
-  parent-keys="contenido_id"
   service="contenidos"
   entity="contenido"
   controls="no"
@@ -14,7 +13,9 @@
   </o-grid-item>
   <o-grid-item colspan="3" rowspan="1">
     <div fxFill class="fondoAzulItemGrid">
-      <p>aqui: {{ grid.dataArray }}</p>
+      <p *ngFor="let list of grid.dataArray">
+        Test: {{ list.contenido_titulo }}
+      </p>
     </div>
   </o-grid-item>
 </o-grid>
