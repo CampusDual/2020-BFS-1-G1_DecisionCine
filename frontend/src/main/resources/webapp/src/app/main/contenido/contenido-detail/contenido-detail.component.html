@@ -1,10 +1,10 @@
 <o-grid
   #grid
-  attr="grid"
   columns="contenido_id;contenido_titulo;contenido_sinopsis;contenido_foto"
   keys="contenido_id"
   service="contenidos"
   entity="contenido"
+  pageable="no"
   controls="no"
   cols="4"
 >
@@ -14,7 +14,7 @@
   <o-grid-item colspan="3" rowspan="1">
     <div fxFill class="fondoAzulItemGrid">
       <p *ngFor="let list of grid.dataArray">
-        Test: {{ list.contenido_titulo }}
+        ID: {{ list.contenido_id }}
       </p>
     </div>
   </o-grid-item>

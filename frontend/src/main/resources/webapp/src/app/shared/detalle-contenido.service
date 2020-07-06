@@ -1,0 +1,12 @@
+import { Injectable, Injector } from '@angular/core';
+
+import { OntimizeEEService } from 'ontimize-web-ngx';
+
+@Injectable()
+export class DetalleContenidoService extends OntimizeEEService {
+
+  constructor(protected injector: Injector) {
+    super(injector);
+  }
+
+}

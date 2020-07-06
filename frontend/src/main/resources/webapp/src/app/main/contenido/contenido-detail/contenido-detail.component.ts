@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-contenido-detail',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContenidoDetailComponent implements OnInit {
 
-  constructor() { }
+  public idDetalle;
+
+  constructor(private route : ActivatedRoute) { }
 
   ngOnInit() {
+
+    this.route.paramMap.subscribe(params => {this.idDetalle = params.get("CONTENIDOID")})
+    console.log("id de detalle clickado: " + this.idDetalle);
+    // console.log(this.getDataArray())
+
   }
 
 }
