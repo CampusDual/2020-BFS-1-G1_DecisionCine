@@ -1,3 +1,42 @@
-.bg {
-  background-color: darkred;
+#bodyHome{
+  background-color: #7b7a79;
 }
+
+#contenedorParrillas{
+  margin-top: 20px;
+  margin-bottom: 50px;
+  width: 100%;
+}
+.parrilla{
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 20px;
+  background-color: black;
+  border: darkgoldenrod;
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 6px;
+}
+
+.contenedor{
+  width: 90%;
+  height: 100%;
+  margin-left:5%;
+  margin-right: 5%;
+}
+
+.imagenGrid{
+  width: 80%;
+  height: 85%;
+  margin-top: 10px;
+  margin-left: 10%;
+}
+
+.tituloGrid{
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  color: darkgoldenrod;
+  text-align: center;
+  font-size: 20px;
+}
+
+
