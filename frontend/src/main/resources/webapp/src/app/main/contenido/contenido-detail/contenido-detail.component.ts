@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { OGridComponent } from 'ontimize-web-ngx';
 
 @Component({
   selector: 'app-contenido-detail',
@@ -9,6 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 export class ContenidoDetailComponent implements OnInit {
 
   public idDetalle;
+  @ViewChild('grid') cuadricula: OGridComponent;
 
   constructor(private route : ActivatedRoute) { }
 
@@ -16,7 +18,8 @@ export class ContenidoDetailComponent implements OnInit {
 
     this.route.paramMap.subscribe(params => {this.idDetalle = params.get("CONTENIDOID")})
     console.log("id de detalle clickado: " + this.idDetalle);
-    // console.log(this.getDataArray())
+    console.log("desde onInit: " + this.cuadricula.getTotalRecordsNumber());
+
 
   }
 
