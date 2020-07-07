@@ -1,17 +1,18 @@
 import { NgModule } from '@angular/core';
 import { OntimizeWebModule } from 'ontimize-web-ngx';
 import { CommonModule } from '@angular/common';
-import { SharedFooterComponent } from "./shared-component-footer/shared-component-footer.component";
+import { SharedComponentFooterComponent } from "./shared-component-footer/shared-component-footer.component";
 
 @NgModule({
   imports: [
     OntimizeWebModule
   ],
   declarations: [
-	SharedFooterComponent
+	SharedComponentFooterComponent
   ],
   exports: [
-    CommonModule
+    CommonModule,
+SharedComponentFooterComponent
   ]
 })
 export class SharedModule { }
