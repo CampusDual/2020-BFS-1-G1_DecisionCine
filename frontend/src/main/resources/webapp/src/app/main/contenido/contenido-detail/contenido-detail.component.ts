@@ -1,6 +1,6 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { OGridComponent } from 'ontimize-web-ngx';
+import { DatosService } from 'app/services/datos.service';
 
 @Component({
   selector: 'app-contenido-detail',
@@ -9,17 +9,19 @@ import { OGridComponent } from 'ontimize-web-ngx';
 })
 export class ContenidoDetailComponent implements OnInit {
 
-  public idDetalle;
-  @ViewChild('grid') cuadricula: OGridComponent;
+  public contenidoFiltrado;
 
-  constructor(private route : ActivatedRoute) { }
+  constructor(activatedRoute: ActivatedRoute, dataService: DatosService) {
+    activatedRoute.params.subscribe(params => {
+      dataService.getContentById(params["CONTENIDOID"]).subscribe(response => {
+        console.log(response);
+        this.contenidoFiltrado = response["data"][0];
+      })
+    })
+
+  }
 
   ngOnInit() {
-
-    this.route.paramMap.subscribe(params => {this.idDetalle = params.get("CONTENIDOID")})
-    console.log("id de detalle clickado: " + this.idDetalle);
-    console.log("desde onInit: " + this.cuadricula.getTotalRecordsNumber());
-
 
   }
 
