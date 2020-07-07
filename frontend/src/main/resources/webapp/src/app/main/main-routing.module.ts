@@ -8,6 +8,8 @@ import { NoticiasModule } from './noticias/noticias.module';
 import {ContenidoModule} from "./contenido/contenido.module";
 import {RepartoModule} from "./reparto/reparto.module";
 
+
+
 export function loadHomeModule() {
   return HomeModule;
 }
