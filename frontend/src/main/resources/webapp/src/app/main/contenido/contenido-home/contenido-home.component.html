@@ -1,71 +1,69 @@
 <o-form editable-detail="no" show-header="no" class="contenidos-filters-form" fxFill>
 <o-column>
 <div class="filtros">
-<div class="buscar_por_titulo">
- <o-combo
-    	attr="Buscar por Titulo" 
-    	read-only="no" 
-    	service="contenidos" 
-    	entity="contenido" 
-    	columns="contenido_id;contenido_titulo"
-      	value-column="contenido_id" 
-      	keys="contenido_id" 
-      	visible-columns="contenido_titulo" 
-      	fxFlex="90">
-    </o-combo>
-  </div>
- <div class="buscar_por_genero">   
+
+<div class="buscar_por_genero">   
     <o-combo
-    	attr="Buscar por genero" 
+    	attr="genero_id" 
     	read-only="no" 
     	service="contenidos" 
-    	entity="contenido" 
-    	columns="contenido_id;contenido_genero_id"
-      	value-column="contenido_genero_id" 
-      	keys="contenido_id" 
-      	visible-columns="contenido_genero_id" 
+    	entity="genero" 
+    	columns="genero_id;genero_nombre"
+      	value-column="genero_id" 
+      	keys="genero_id" 
+      	visible-columns="genero_nombre" 
       	fxFlex="90">
     </o-combo>
 </div>
-<div class="buscar_por_tipo">
-    <o-combo
-    	attr="Buscar por tipo(pelicula/serie/documental)" 
-    	read-only="no" 
-    	service="contenidos" 
-    	entity="contenido" 
-    	columns="contenido_id;contenido_tipo_contenido_id"
-      	value-column="contenido_tipo_contenido_id" 
-      	keys="contenido_id" 
-      	visible-columns="contenido_tipo_contenido_id" 
-      	fxFlex="90">
-    </o-combo>
-    </div>
-    </div>
+
+</div>
    	<o-row layout-align="end">
  		<o-button 
 	 		attr="filter" 
 	 		[oFilterBuilderQuery]="filterBuilder" 
 	 		type="RAISED" 
-	 		label="Filter">
+	 		label="Filter" 
+	 		(click)="table.reloadData()" >
+	 		
 		</o-button>
 		<o-button 
 	      attr="clear" 
 	      [oFilterBuilderClear]="filterBuilder" 
 	      type="RAISED" 
 	      label="Clear" 
-	      class="filter-button">
+	      class="filter-button" 
+	 		(click)="filterBuilder.clearFilter()"> 
+	      
     	</o-button>
+    	
 	</o-row>
-
    <o-filter-builder #filterBuilder 
-		attr="thefilter" 
-	  	filters="contenido_titulo:Buscar por Titulo;contenido_genero_id:Buscar por genero;contenido_tipo_contenido_id:Buscar por tipo(pelicula/serie/documental)" 
-	  	[target]="grid"
+		attr="filterBuilder" 
+	  	filters="genero_id" 
+	  	[target]="table"
 	    [expression-builder]="createFilter">
-   </o-filter-builder>
-   
+   </o-filter-builder> 
 </o-column>
 
+
+ <o-table #table
+    fxFlex
+    attr="contenido_id"
+    service="contenidos" 
+  	entity="contenido"
+    columns="contenido_id;contenido_genero_id;contenido_tipo_contenido_id;contenido_titulo;contenido_sinopsis;contenido_duracion;contenido_puntuacion;contenido_fecha_estreno;contenido_capitulos;contenido_foto" 
+    visible-columns="contenido_id;contenido_genero_id;contenido_tipo_contenido_id;contenido_titulo;contenido_foto"
+    keys="contenido_id"
+    query-rows="5"
+    quick-filter="no" >
+  <o-table-column attr="contenido_id" title="contenido_id"></o-table-column>
+  <o-table-column attr="contenido_genero_id" title="contenido_genero_id;"></o-table-column>
+  <o-table-column attr="contenido_tipo_contenido_id" title="contenido_tipo_contenido_id"></o-table-column>
+  <o-table-column attr="contenido_titulo" title="contenido_titulo"></o-table-column>
+  <o-table-column attr="contenido_foto" title="contenido_foto" type=image></o-table-column>
+  </o-table>
+  
+  <!-- 
 <o-grid #grid 
 	columns="contenido_id;contenido_genero_id;contenido_tipo_contenido_id;contenido_titulo;contenido_sinopsis;contenido_duracion;contenido_puntuacion;contenido_fecha_estreno;contenido_capitulos;contenido_foto" 
 	keys="contenido_id" 
@@ -84,4 +82,6 @@
     </o-column>
   </o-grid-item>
 </o-grid>
+ --> 
+ 
 </o-form>
