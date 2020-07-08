@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { ContenidoRoutingModule } from './contenido-routing.module';
 import {OntimizeWebModule} from "ontimize-web-ngx";
 import {ContenidoHomeComponent} from "./contenido-home/contenido-home.component";
-import { ContenidoDetailComponent } from './contenido-detail/contenido-detail.component';
 
 @NgModule({
   imports: [
@@ -13,11 +12,7 @@ import { ContenidoDetailComponent } from './contenido-detail/contenido-detail.co
     ContenidoRoutingModule
   ],
   declarations: [
-    ContenidoHomeComponent,
-    ContenidoDetailComponent
-  ],
-  exports:[
-      ContenidoDetailComponent
+    ContenidoHomeComponent
   ]
 })
 export class ContenidoModule { }
