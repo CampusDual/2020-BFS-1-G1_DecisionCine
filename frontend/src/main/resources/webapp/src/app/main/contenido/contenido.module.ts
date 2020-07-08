@@ -15,6 +15,9 @@ import { ContenidoDetailComponent } from './contenido-detail/contenido-detail.co
   declarations: [
     ContenidoHomeComponent,
     ContenidoDetailComponent
+  ],
+  exports:[
+      ContenidoDetailComponent
   ]
 })
 export class ContenidoModule { }
