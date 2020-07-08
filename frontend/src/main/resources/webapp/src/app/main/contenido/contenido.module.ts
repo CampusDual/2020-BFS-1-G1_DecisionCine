@@ -4,20 +4,17 @@ import { CommonModule } from '@angular/common';
 import { ContenidoRoutingModule } from './contenido-routing.module';
 import {OntimizeWebModule} from "ontimize-web-ngx";
 import {ContenidoHomeComponent} from "./contenido-home/contenido-home.component";
-import { ContenidoDetailComponent } from './contenido-detail/contenido-detail.component';
+import { SharedModule } from 'app/shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
     OntimizeWebModule,
-    ContenidoRoutingModule
+    ContenidoRoutingModule,
+    SharedModule
   ],
   declarations: [
-    ContenidoHomeComponent,
-    ContenidoDetailComponent
-  ],
-  exports:[
-      ContenidoDetailComponent
+    ContenidoHomeComponent
   ]
 })
 export class ContenidoModule { }
