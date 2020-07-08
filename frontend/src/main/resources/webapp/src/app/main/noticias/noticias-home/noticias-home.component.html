@@ -1,18 +1,52 @@
-<div fxFlex>
-  <o-table
-    fxFlex
-    attr="noticiasTable"
-    service="noticias"
-    entity="noticia"
-    keys="noticia_id"
-    columns="noticia_id;noticia_usuario_id;noticia_descripcion;noticia_fecha_alta;noticia_fecha_modificacion"
-    visible-columns="noticia_id;noticia_usuario_id;noticia_descripcion;noticia_fecha_alta;noticia_fecha_modificacion"
-    query-rows="5"
-  >
-  <o-table-column attr="noticia_id" title="NOTICIAID"></o-table-column>
-  <o-table-column attr="noticia_usuario_id" title="NOTICIAUSUARIOID"></o-table-column>
-  <o-table-column attr="noticia_descripcion" title="NOTICIADESCRIPCION"></o-table-column>
-  <o-table-column attr="noticia_fecha_alta" title="FECHAALTA" type="date" format="LL"></o-table-column>
-    <o-table-column attr="noticia_fecha_modificacion" title="FECHAMODIFICACION" type="date" format="LL"></o-table-column>
-  </o-table>
+
+<div> 
+<o-list #list 
+attr="noticia_id" 
+columns="noticia_id;noticia_usuario_id;noticia_descripcion;noticia_fecha_alta;noticia_fecha_modificacion;noticia_titulo"
+service="noticias"
+entity="noticia"
+title="Noticias"
+quick-filter="false">
+
+  <mat-card *ngFor="let row of list.dataArray" [o-list-item]="row">
+    <mat-card-header>
+      <div mat-card-avatar>
+       
+      </div>
+      <mat-card-title>{{ row.noticia_titulo }}</mat-card-title>
+      <mat-card-subtitle>{{ row.noticia_descripcion }}</mat-card-subtitle>
+    </mat-card-header>
+  </mat-card>
+
+</o-list>
 </div>
+
+<!--  
+	quick-filter-columns="name;username;email"
+<div>
+	<o-grid #gridnoticia
+			columns="noticia_id;noticia_usuario_id;noticia_descripcion;noticia_fecha_alta;noticia_fecha_modificacion;noticia_titulo"
+			keys="noticia_id"
+			show-page-size="yes"
+			page-size-options="1;2;4"
+			quick-filter="false"
+			service="noticias"
+			entity="noticia"
+			cols="1"
+			grid-item-height="1:0.2"
+			refresh-button="false"
+			>
+			
+		<o-grid-item *ngFor="let list of gridnoticia.dataArray">
+			<o-column layout-padding class="contendedorColumna">
+				
+				<h4> {{list.noticia_titulo}} </h4>
+				<p> {{list.noticia_descripcion}} </p>
+			</o-column>
+		</o-grid-item>
+	</o-grid>
+</div>
+
+-->
+
+
