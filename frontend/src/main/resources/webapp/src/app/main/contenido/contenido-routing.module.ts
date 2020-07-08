@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {ContenidoHomeComponent} from "./contenido-home/contenido-home.component";
 import { ContenidoDetailComponent } from 'app/shared/contenido-detail/contenido-detail.component';
-
+import { ComentariosDetailComponent } from 'app/shared/comentarios-detail/comentarios-detail.component';
 const routes: Routes = [{
   path: '',
   component: ContenidoHomeComponent
@@ -10,6 +10,10 @@ const routes: Routes = [{
 {
   path: ':CONTENIDOID',
   component: ContenidoDetailComponent
+},
+{
+  path: ':COMENTARIOID',
+  component: ComentariosDetailComponent
 }];
 
 @NgModule({

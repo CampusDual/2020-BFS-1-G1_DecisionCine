@@ -1,0 +1,18 @@
+<div>
+	<o-grid #gridcomentarios
+			columns="comentario_id;contenido_id;usuario_id;descripcion;fecha"
+			keys="comentario_id"
+			show-page-size="yes"
+			page-size-options="4;8;16"
+			quick-filter="false"
+			service="comentarios"
+			entity="comentario">
+		<o-grid-item *ngFor="let list of gridcomentarios.dataArray">
+			<o-column layout-padding class="contendedorColumna">
+		
+				<p> {{list.descripcion}} </p>
+			
+			</o-column>
+		</o-grid-item>
+	</o-grid>
+</div>
