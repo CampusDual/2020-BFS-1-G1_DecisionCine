@@ -1,0 +1,17 @@
+<o-grid
+  pageable="no"
+  controls="no"
+  cols="4"
+>
+  <o-grid-item colspan="1" rowspan="1">
+    <div fxFill class="fondoAzulItemGrid">
+      <o-image data="{{contenidoFiltrado.contenido_foto}}" style="margin-top:8px" show-controls="false"></o-image>
+    </div>
+  </o-grid-item>
+  <o-grid-item colspan="3" rowspan="1">
+    <div fxFill class="fondoAzulItemGrid">
+      <p>Titulo: {{ contenidoFiltrado.contenido_titulo }}</p>
+      <p>Sinopsis: {{ contenidoFiltrado.contenido_sinopsis }}</p>
+    </div>
+  </o-grid-item>
+</o-grid>
