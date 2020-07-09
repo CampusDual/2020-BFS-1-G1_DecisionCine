@@ -6,7 +6,8 @@ columns="noticia_id;noticia_usuario_id;noticia_descripcion;noticia_fecha_alta;no
 service="noticias"
 entity="noticia"
 title="Noticias"
-quick-filter="false">
+quick-filter="false"
+controls="none">
 
   <mat-card *ngFor="let row of list.dataArray" [o-list-item]="row">
     <mat-card-header>
@@ -21,32 +22,6 @@ quick-filter="false">
 </o-list>
 </div>
 
-<!--  
-	quick-filter-columns="name;username;email"
-<div>
-	<o-grid #gridnoticia
-			columns="noticia_id;noticia_usuario_id;noticia_descripcion;noticia_fecha_alta;noticia_fecha_modificacion;noticia_titulo"
-			keys="noticia_id"
-			show-page-size="yes"
-			page-size-options="1;2;4"
-			quick-filter="false"
-			service="noticias"
-			entity="noticia"
-			cols="1"
-			grid-item-height="1:0.2"
-			refresh-button="false"
-			>
-			
-		<o-grid-item *ngFor="let list of gridnoticia.dataArray">
-			<o-column layout-padding class="contendedorColumna">
-				
-				<h4> {{list.noticia_titulo}} </h4>
-				<p> {{list.noticia_descripcion}} </p>
-			</o-column>
-		</o-grid-item>
-	</o-grid>
-</div>
 
--->
 
 
