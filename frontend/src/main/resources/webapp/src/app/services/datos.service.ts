@@ -29,6 +29,22 @@ export class DatosService {
     }
     return this.http.post<any>(this.apiEndPointContenido, postBody, this.httOptions);
   }
+
+ getComentariosBycometarioId(contenido_id: Number): Observable<RespuestaBackOntimize> {
+    const postBody = {
+      "filter": {
+        "contenido_id": +contenido_id
+      },
+      "columns": [
+       "comentario_id", "contenido_id","usuario_id","descripcion","fecha"
+      ]
+    }
+    return this.http.post<any>(this.apiEndPointContenido, postBody, this.httOptions);
+  }
+
+
+
+
 }
 
 interface RespuestaBackOntimize{
