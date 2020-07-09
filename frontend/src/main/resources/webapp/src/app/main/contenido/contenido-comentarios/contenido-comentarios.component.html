@@ -9,19 +9,26 @@ service="comentarios"
 entity="comentario"
 quick-filter="false"
 controls="none">
+<!--
+parent-keys="contenido_id"
+-->
 
-  <mat-card *ngFor="let row of listcomentarios.dataArray" [o-list-item]="row">
+  <mat-card *ngFor="let comentarioFiltrado of listcomentarios.dataArray" [o-list-item]="comentarioFiltrado">
     <mat-card-header>
       <div mat-card-avatar>
        
       </div>
-      <mat-card-subtitle>{{ row.descripcion}}</mat-card-subtitle>
+      <mat-card-subtitle>{{ comentarioFiltrado.descripcion}}</mat-card-subtitle>
       
     </mat-card-header>
   </mat-card>
 
 </o-list>
 </div>
+
+
+
+
  <!--  
  <div> 
 <o-list #listcomentarios

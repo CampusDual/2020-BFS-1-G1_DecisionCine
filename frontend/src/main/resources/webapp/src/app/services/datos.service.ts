@@ -15,6 +15,7 @@ export class DatosService {
   }
 
   private apiEndPointContenido = CONFIG.apiEndpoint + "/contenidos/contenido/search";
+  private apiEndPointComentario = CONFIG.apiEndpoint + "/comentarios/comentario/search";
 
   constructor(private http: HttpClient) { }
 
@@ -38,7 +39,7 @@ getComentariosBycometarioId(contenido_id: Number): Observable<RespuestaBackOntim
        "comentario_id", "contenido_id","usuario_id","descripcion","fecha"
       ]
     }
-    return this.http.post<any>(this.apiEndPointContenido, postBody, this.httOptions);
+    return this.http.post<any>(this.apiEndPointComentario, postBody, this.httOptions);
   }
 
 }

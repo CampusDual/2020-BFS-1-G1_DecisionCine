@@ -12,9 +12,9 @@ export class ContenidoComentariosComponent implements OnInit {
 
   constructor(activatedRoute: ActivatedRoute, dataService: DatosService) {
     activatedRoute.params.subscribe(params => {
-      dataService.getComentariosBycometarioId(params["COMENTARIOID"]).subscribe(response => {
+      dataService.getComentariosBycometarioId(params["CONTENIDOID"]).subscribe(response => {
         console.log(response);
-        this.comentarioFiltrado = response["data"][0];
+        this.comentarioFiltrado = response["data"];
       })
     })
 
