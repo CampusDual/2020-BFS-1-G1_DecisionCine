@@ -29,7 +29,8 @@ export const routes: Routes = [
   {
     path: '',
     component: MainComponent,
-    canActivate: [AuthGuardService],
+    //si le indicas canActivate te enviara a la pantalla de Login
+    //canActivate: true,
     children: [
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       {
