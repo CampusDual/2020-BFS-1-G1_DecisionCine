@@ -10,7 +10,8 @@
               entity="ultimosEstrenos"
               [cols]="5"
               controls="false"
-              grid-item-height="1:1.3">
+              grid-item-height="1:1.3"
+              (onClick)="onRedirectToDetail($event)">
 
         <o-grid-item *ngFor="let list of gridEstrenos.dataArray" class="contenedorEstrenos">
           <o-column layout-padding class="contenedor">
@@ -31,7 +32,8 @@
               entity="puntuadas"
               [cols]="5"
               controls="false"
-              grid-item-height="1:1.3">
+              grid-item-height="1:1.3"
+              (onClick)="onRedirectToDetail($event)">
 
 
         <o-grid-item *ngFor="let list of gridPuntuadas.dataArray" class="contenedorPuntuadas">
