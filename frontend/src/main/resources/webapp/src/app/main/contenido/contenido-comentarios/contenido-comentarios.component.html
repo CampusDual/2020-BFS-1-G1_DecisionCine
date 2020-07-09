@@ -16,10 +16,32 @@ controls="none">
        
       </div>
       <mat-card-subtitle>{{ row.descripcion}}</mat-card-subtitle>
+      
     </mat-card-header>
   </mat-card>
 
 </o-list>
 </div>
- 
+ <!--  
+ <div> 
+<o-list #listcomentarios
+attr="noticia_id" 
+columns="comentario_id;contenido_id;usuario_id;descripcion;fecha"
+service="comentarios"
+entity="comentario"
+quick-filter="false"
+controls="none">
 
+  <mat-card *ngFor="let row of listcomentarios.dataArray" [o-list-item]="row">
+    <mat-card-header>
+      <div mat-card-avatar>
+       
+      </div>
+      <mat-card-subtitle>{{ row.descripcion}}</mat-card-subtitle>
+      
+    </mat-card-header>
+  </mat-card>
+
+</o-list>
+</div>
+-->
