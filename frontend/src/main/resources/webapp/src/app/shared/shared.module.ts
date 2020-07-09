@@ -8,11 +8,11 @@ import { SharedComponentFooterComponent } from "./shared-component-footer/shared
     OntimizeWebModule
   ],
   declarations: [
-	SharedComponentFooterComponent
+    SharedComponentFooterComponent
   ],
   exports: [
     CommonModule,
-SharedComponentFooterComponent
+    SharedComponentFooterComponent
   ]
 })
 export class SharedModule { }
