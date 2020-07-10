@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home.component';
-import { ContenidoDetailComponent } from 'app/shared/contenido-detail/contenido-detail.component';
+import { ContenidoDetailComponent } from 'app/main/contenido/contenido-detail/contenido-detail.component';
 
 const routes: Routes = [
   {
