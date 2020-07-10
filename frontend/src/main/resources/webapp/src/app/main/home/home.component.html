@@ -1,8 +1,8 @@
-<div id="bodyHome" fxLayout="row" layout-padding fxLayoutAlign="center center">
+<div id="bodyHome" fxLayout="row" layout-padding>
 
-  <div id="contenedorParrillas">
+  <div class="contenedorParrillas">
     <div class="parrilla">
-      <p class="tituloGrid" style="  font-weight: bold;">Ultimos Estrenos</p>
+      <p class="textoGrid" style="  font-weight: bold;">Ultimos Estrenos</p>
       <o-grid #gridEstrenos
               columns="contenido_id;contenido_genero_id;contenido_tipo_contenido_id;contenido_titulo;contenido_sinopsis;contenido_duracion;contenido_puntuacion;contenido_fecha_estreno;contenido_capitulos;contenido_foto"
               keys="contenido_id"
@@ -11,20 +11,29 @@
               [cols]="5"
               controls="false"
               grid-item-height="1:1.3"
+              pagination-controls="false"
+              show-footer="none">
               (onClick)="onRedirectToDetail($event)">
 
-        <o-grid-item *ngFor="let list of gridEstrenos.dataArray" class="contenedorEstrenos">
-          <o-column layout-padding class="contenedor">
-            <o-image class="imagenGrid" data="{{list.contenido_foto}}" style="margin-top:8px" show-controls="false"></o-image>
+        <o-grid-item *ngFor="let list of gridEstrenos.dataArray">
+          <o-column>
+            <div class="contenedor">
+              <div class="columnImagen">
+                <o-image class="imagenGrid" data="{{list.contenido_foto}}" style="margin-top:8px" show-controls="false"></o-image>
+              </div>
+              <div class="columnTexto">
+                <p class="textoGrid" style="  font-size: 13px;"> {{list.contenido_titulo}} </p>
+                <p class="textoGrid" style="  font-size: 13px;"> {{list.contenido_puntuacion}} </p>
+              </div>
+            </div>
 
-            <p class="tituloGrid" style="  font-size: 15px;"> {{list.contenido_titulo}} </p>
           </o-column>
         </o-grid-item>
       </o-grid>
     </div>
 
     <div class="parrilla">
-      <p class="tituloGrid" style="  font-weight: bold;">Más Puntuadas</p>
+      <p class="textoGrid" style="  font-weight: bold;">Más Puntuadas</p>
       <o-grid #gridPuntuadas
               columns="contenido_id;contenido_genero_id;contenido_tipo_contenido_id;contenido_titulo;contenido_sinopsis;contenido_duracion;contenido_puntuacion;contenido_fecha_estreno;contenido_capitulos;contenido_foto"
               keys="contenido_id"
@@ -33,17 +42,25 @@
               [cols]="5"
               controls="false"
               grid-item-height="1:1.3"
+              pagination-controls="false"
+              show-footer="none">
               (onClick)="onRedirectToDetail($event)">
 
-
-        <o-grid-item *ngFor="let list of gridPuntuadas.dataArray" class="contenedorPuntuadas">
-          <o-column layout-padding class="contenedor">
-            <o-image class="imagenGrid" data="{{list.contenido_foto}}" style="margin-top:8px" show-controls="false"></o-image>
-
-            <p class="tituloGrid" style="  font-size: 15px;"> {{list.contenido_titulo}} </p>
+        <o-grid-item *ngFor="let list of gridPuntuadas.dataArray" >
+          <o-column>
+            <div class="contenedor">
+              <div class="columnImagen">
+                <o-image class="imagenGrid" data="{{list.contenido_foto}}" style="margin-top:8px" show-controls="false"></o-image>
+              </div>
+              <div class="columnTexto">
+                <p class="textoGrid" style="  font-size: 13px;"> {{list.contenido_titulo}} </p>
+                <p class="textoGrid" style="  font-size: 13px;"> {{list.contenido_puntuacion}} </p>
+              </div>
+            </div>
           </o-column>
         </o-grid-item>
       </o-grid>
     </div>
   </div>
 </div>
+
