@@ -12,4 +12,21 @@
         <Column>contenido_reparto_rol_id</Column>
     </UpdateKeys>
     <GeneratedKey>contenido_reparto_rol_id</GeneratedKey>
+    <Queries>
+        <Query id="default">
+            <Sentence>
+                <![CDATA[
+                    SELECT
+                    #COLUMNS#
+                    FROM
+                    PUBLIC.contenido_reparto_rol crr
+                        INNER JOIN PUBLIC.reparto r
+                            ON crr.reparto_id = r.reparto_id
+                        INNER JOIN PUBLIC.rol ro
+                            ON crr.rol_id = ro.rol_id
+                    #WHERE#
+                ]]>
+            </Sentence>
+        </Query>
+    </Queries>
 </JdbcEntitySetup>
