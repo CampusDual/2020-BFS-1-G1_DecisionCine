@@ -1,5 +1,4 @@
 <div class="contendedorParrillaContenido">
-	<p>preuba texto</p>
 	<div class="contenedorParrillas">
 		<div class="parrilla">
 			<o-grid #grid
@@ -9,12 +8,16 @@
 					entity="reparto"
 					show-page-size="no"
 					quick-filter="false"
-					[cols]="5"
 					pagination-controls="true"
 					query-rows="10"
 					show-footer="true"
 					controls="none"
-					page-size-options="10;20;30">
+					page-size-options="10;20;"
+					ng-reflect-value="10">
+
+					<!-- cols="10" -->
+
+
 
 				<o-grid-item *ngFor="let list of grid.dataArray">
 					<o-column>
