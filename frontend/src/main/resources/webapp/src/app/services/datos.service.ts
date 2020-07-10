@@ -15,6 +15,7 @@ export class DatosService {
   }
 
   private apiEndPointContenido = CONFIG.apiEndpoint + "/contenidos/contenido/search";
+  private apiEndPointComentario = CONFIG.apiEndpoint + "/comentarios/comentario/search";
 
   constructor(private http: HttpClient) { }
 
@@ -29,6 +30,18 @@ export class DatosService {
     }
     return this.http.post<any>(this.apiEndPointContenido, postBody, this.httOptions);
   }
+getComentariosBycometarioId(contenido_id: Number): Observable<RespuestaBackOntimize> {
+    const postBody = {
+      "filter": {
+        "contenido_id": +contenido_id
+      },
+      "columns": [
+       "comentario_id", "contenido_id","usuario_id","descripcion","fecha"
+      ]
+    }
+    return this.http.post<any>(this.apiEndPointComentario, postBody, this.httOptions);
+  }
+
 }
 
 interface RespuestaBackOntimize{
