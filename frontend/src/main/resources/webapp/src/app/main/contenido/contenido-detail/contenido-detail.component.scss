@@ -3,3 +3,14 @@
     background-color: #9593ed;
 
 }
+/*este o-list-item es del o-list de comentarios. Es una etiqueta que tiene el ontimize por dentro y que con el 50% 
+se reduce el ancho de la lista y con el margin se centra la lista, el !important es para indicarle que de todos los atributos 
+tenga el o-list-item (tiene muchos por atrás que nos e ven)el margin sea la mas importante.
+
+*/
+.o-list-item {
+	width:50%;
+	margin:0 auto !important;
+	
+	
+}

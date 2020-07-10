@@ -19,5 +19,31 @@
   </o-grid-item>
 
 </o-grid>
+  <!--  <app-contenido-comentarios contenido_id="CONTENIDO_ID"></app-contenido-comentarios> -->
+  
+  
+ <div> 
+<o-list #listcomentarios
+attr="noticia_id" 
+columns="comentario_id;contenido_id;usuario_id;descripcion;fecha"
+service="comentarios"
+entity="comentario"
+quick-filter="false"
+controls="none">
+<!--
+parent-keys="contenido_id"
+-->
 
-    <app-contenido-comentarios contenido_id="CONTENIDO_ID"></app-contenido-comentarios>
+  <mat-card *ngFor="let comentarioFiltrado of listcomentarios.dataArray" [o-list-item]="comentarioFiltrado">
+    <mat-card-header>
+      <div mat-card-avatar>
+       
+      </div>
+      <mat-card-subtitle>{{ comentarioFiltrado.descripcion}}</mat-card-subtitle>
+      
+    </mat-card-header>
+  </mat-card>
+
+</o-list>
+</div>
+  
