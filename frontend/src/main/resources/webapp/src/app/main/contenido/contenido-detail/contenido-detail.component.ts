@@ -8,28 +8,6 @@ import { DatosService } from 'app/services/datos.service';
 	styleUrls: ['./contenido-detail.component.scss']
 })
 
-/*
-export class ContenidoDetailComponent implements OnInit {
-
-  public contenidoFiltrado;
-
-  constructor(activatedRoute: ActivatedRoute, dataService: DatosService) {
-    activatedRoute.params.subscribe(params => {
-      dataService.getContentById(params["CONTENIDOID"]).subscribe(response => {
-        console.log(response);
-        this.contenidoFiltrado = response["data"][0];
-      })
-    })
-
-  }
-
-  ngOnInit() {
-
-  }
-
-}
-*/
-
 export class ContenidoDetailComponent implements OnInit {
 
 	public contenidoFiltrado;
@@ -41,20 +19,20 @@ export class ContenidoDetailComponent implements OnInit {
 				console.log(response);
 				this.contenidoFiltrado = response["data"][0];
 			})
-		dataService.getComentariosBycometarioId(params["CONTENIDOID"]).subscribe(response => {
-			console.log(response);
-			this.comentarioFiltrado = response["data"];
-		})
+			dataService.getComentariosBycometarioId(params["CONTENIDOID"]).subscribe(response => {
+				console.log(response);
+				this.comentarioFiltrado = response["data"];
+			})
 
 		}
 
 		)
 
 	}
-ngOnInit() {
+	ngOnInit() {
 
-}	
-	
+	}
+
 }
 
 

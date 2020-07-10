@@ -1,9 +1,9 @@
-<p>fsfsfs</p>
+<p>asdd </p>
+<o-form> 
 <o-grid
   pageable="no"
   controls="no"
-  cols="4"
->
+  cols="4">
   <o-grid-item colspan="1" rowspan="1">
     <div fxFill class="fondoAzulItemGrid">
       <o-image data="{{contenidoFiltrado.contenido_foto}}" style="margin-top:8px" show-controls="false"></o-image>
@@ -12,38 +12,29 @@
   <o-grid-item colspan="3" rowspan="1">
     <div fxFill class="fondoAzulItemGrid">
       <p>Titulo: {{ contenidoFiltrado.contenido_titulo }}</p>
-      <p>Sinopsis: {{ contenidoFiltrado.contenido_sinopsis }}</p>
-    
+      <p>Sinopsis: {{ contenidoFiltrado.contenido_sinopsis }}</p>    
     </div>
-  
   </o-grid-item>
-
 </o-grid>
-  <!--  <app-contenido-comentarios contenido_id="CONTENIDO_ID"></app-contenido-comentarios> -->
-  
+ 
   
  <div> 
-<o-list #listcomentarios
-attr="noticia_id" 
+<o-list 
+attr="comentario_id" 
 columns="comentario_id;contenido_id;usuario_id;descripcion;fecha"
 service="comentarios"
 entity="comentario"
 quick-filter="false"
 controls="none">
-<!--
-parent-keys="contenido_id"
--->
 
-  <mat-card *ngFor="let comentarioFiltrado of listcomentarios.dataArray" [o-list-item]="comentarioFiltrado">
+  <mat-card *ngFor="let comentario of comentarioFiltrado" >
     <mat-card-header>
       <div mat-card-avatar>
-       
       </div>
-      <mat-card-subtitle>{{ comentarioFiltrado.descripcion}}</mat-card-subtitle>
-      
+      <mat-card-subtitle>{{ comentario.descripcion}}</mat-card-subtitle>
+
     </mat-card-header>
   </mat-card>
-
 </o-list>
 </div>
-  
+</o-form> 
