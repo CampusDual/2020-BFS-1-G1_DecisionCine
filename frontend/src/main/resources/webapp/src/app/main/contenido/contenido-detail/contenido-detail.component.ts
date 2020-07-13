@@ -12,7 +12,9 @@ export class ContenidoDetailComponent implements OnInit {
 
 	public contenidoFiltrado;
 	public comentarioFiltrado;
-
+	public mostrarcomentario:boolean;
+	
+	
 	constructor(activatedRoute: ActivatedRoute, dataService: DatosService) {
 		activatedRoute.params.subscribe(params => {
 			dataService.getContentById(params["CONTENIDOID"]).subscribe(response => {
@@ -22,6 +24,7 @@ export class ContenidoDetailComponent implements OnInit {
 			dataService.getComentariosBycometarioId(params["CONTENIDOID"]).subscribe(response => {
 				console.log(response);
 				this.comentarioFiltrado = response["data"];
+				this.inicializarcomentario(this.comentarioFiltrado.length);
 			})
 
 		}
@@ -30,7 +33,14 @@ export class ContenidoDetailComponent implements OnInit {
 
 	}
 	ngOnInit() {
-
+	
+	}
+	
+	inicializarcomentario(cantidad:number){
+		console.log("entrando en inicializarcomentario: " + cantidad);
+		if(cantidad==undefined){
+			console.log ("no hay comentarios")
+		}
 	}
 
 }

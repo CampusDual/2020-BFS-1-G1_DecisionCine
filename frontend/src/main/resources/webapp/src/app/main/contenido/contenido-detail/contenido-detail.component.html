@@ -12,7 +12,9 @@
   <o-grid-item colspan="3" rowspan="1">
     <div fxFill class="fondoAzulItemGrid">
       <p>Titulo: {{ contenidoFiltrado.contenido_titulo }}</p>
-      <p>Sinopsis: {{ contenidoFiltrado.contenido_sinopsis }}</p>    
+      <p>Sinopsis: {{ contenidoFiltrado.contenido_sinopsis }}</p>
+      <p>Duracion: {{ contenidoFiltrado.contenido_duracion }} min.</p>
+      <p>Puntuacion: {{ contenidoFiltrado.contenido_puntuacion }}</p>        
     </div>
   </o-grid-item>
 </o-grid>
@@ -27,14 +29,35 @@ entity="comentario"
 quick-filter="false"
 controls="none">
 
-  <mat-card *ngFor="let comentario of comentarioFiltrado" >
-    <mat-card-header>
+
+  <mat-card  *ngFor="let comentario of comentarioFiltrado" >
+   		<mat-card-header  >
+    		<mat-card-subtitle>{{mostrarcomentario}}</mat-card-subtitle>
+    	</mat-card-header>
+
+    	<mat-card-header #muestraComentario>
+     		 <div mat-card-avatar>
+      		</div>
+      		<mat-card-subtitle>{{ comentario.descripcion}}</mat-card-subtitle>
+
+    	</mat-card-header>
+   
+  </mat-card>
+
+<!--  
+  
+    <mat-card  *ngFor="let comentario of comentarioFiltrado" >
+    <mat-card-header >
       <div mat-card-avatar>
       </div>
       <mat-card-subtitle>{{ comentario.descripcion}}</mat-card-subtitle>
-
-    </mat-card-header>
+    </mat-card-header>  
   </mat-card>
+  
+  
+  *ngIf="mostrarcomentario; else muestraComentario"
+-->  
+
 </o-list>
 </div>
 </o-form> 

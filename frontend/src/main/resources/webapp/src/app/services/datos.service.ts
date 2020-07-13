@@ -25,7 +25,7 @@ export class DatosService {
         "contenido_id": +content_id
       },
       "columns": [
-        "contenido_id", "contenido_titulo", "contenido_sinopsis", "contenido_foto"
+        "contenido_id", "contenido_tipo_contenido_id", "contenido_sinopsis","contenido_puntuacion","contenido_genero_id", "contenido_fecha_estreno","contenido_titulo","contenido_duracion", "contenido_foto","contenido_capitulos"
       ]
     }
     return this.http.post<any>(this.apiEndPointContenido, postBody, this.httOptions);
