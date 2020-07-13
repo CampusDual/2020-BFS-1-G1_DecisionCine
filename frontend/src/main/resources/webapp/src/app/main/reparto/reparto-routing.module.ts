@@ -8,7 +8,7 @@ const routes: Routes = [{
   component: RepartoHomeComponent
 },
 {
-  path: ':REPARTOOID',
+  path: ':REPARTOID',
   component: RepartoDetailComponent
 }
 ];
