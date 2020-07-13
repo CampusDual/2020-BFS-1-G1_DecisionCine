@@ -39,7 +39,11 @@ export class ContenidoDetailComponent implements OnInit {
 	inicializarcomentario(cantidad:number){
 		console.log("entrando en inicializarcomentario: " + cantidad);
 		if(cantidad==undefined){
-			console.log ("no hay comentarios")
+			console.log ("no hay comentarios");
+			this.mostrarcomentario=false;
+		}else {
+			console.log ("hay: "+ cantidad);
+			this.mostrarcomentario=true;
 		}
 	}
 

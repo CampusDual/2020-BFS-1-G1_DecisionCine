@@ -29,35 +29,25 @@ entity="comentario"
 quick-filter="false"
 controls="none">
 
+<div *ngIf="mostrarcomentario; else nohaycomentarios"> 
+  <mat-card *ngFor="let comentario of comentarioFiltrado" >
 
-  <mat-card  *ngFor="let comentario of comentarioFiltrado" >
-   		<mat-card-header  >
-    		<mat-card-subtitle>{{mostrarcomentario}}</mat-card-subtitle>
-    	</mat-card-header>
-
-    	<mat-card-header #muestraComentario>
+    	<mat-card-header>
      		 <div mat-card-avatar>
       		</div>
-      		<mat-card-subtitle>{{ comentario.descripcion}}</mat-card-subtitle>
-
+      		<mat-card-subtitle>{{ comentario.descripcion}}</mat-card-subtitle>		
     	</mat-card-header>
-   
   </mat-card>
-
-<!--  
-  
-    <mat-card  *ngFor="let comentario of comentarioFiltrado" >
-    <mat-card-header >
-      <div mat-card-avatar>
-      </div>
-      <mat-card-subtitle>{{ comentario.descripcion}}</mat-card-subtitle>
-    </mat-card-header>  
-  </mat-card>
-  
-  
-  *ngIf="mostrarcomentario; else muestraComentario"
--->  
-
+ </div> 
+ <ng-template #nohaycomentarios> 
+<mat-card >
+		<mat-card-header >
+     		 <div mat-card-avatar>
+      		</div>
+      		<mat-card-subtitle>No hay comentarios disponibles</mat-card-subtitle>		
+    	</mat-card-header>
+ </mat-card>
+</ng-template> 
 </o-list>
 </div>
 </o-form> 
