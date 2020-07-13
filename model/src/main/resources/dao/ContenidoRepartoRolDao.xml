@@ -13,7 +13,7 @@
     </UpdateKeys>
     <GeneratedKey>contenido_reparto_rol_id</GeneratedKey>
     <Queries>
-        <Query id="default">
+        <Query id="repartosPorContenido">
             <AmbiguousColumns>
                 <AmbiguousColumn name="reparto_id" prefix="crr"
                                  databaseName="reparto_id" />
@@ -28,6 +28,27 @@
                             ON crr.reparto_id = r.reparto_id
                         INNER JOIN PUBLIC.rol ro
                             ON crr.rol_id = ro.rol_id
+                    #WHERE#
+                ]]>
+            </Sentence>
+        </Query>
+        <Query id="contenidosPorReparto">
+            <AmbiguousColumns>
+                <AmbiguousColumn name="reparto_id" prefix="crr"
+                                 databaseName="reparto_id" />
+            </AmbiguousColumns>
+            <Sentence>
+                <![CDATA[
+                    SELECT
+                    #COLUMNS#
+                    FROM
+                    PUBLIC.contenido_reparto_rol crr
+                        INNER JOIN PUBLIC.reparto r
+                            ON crr.reparto_id = r.reparto_id
+                        INNER JOIN PUBLIC.rol ro
+                            ON crr.rol_id = ro.rol_id
+                        INNER JOIN PUBLIC.contenido cont
+                            ON crr.contenido_id = cont.contenido_id
                     #WHERE#
                 ]]>
             </Sentence>
