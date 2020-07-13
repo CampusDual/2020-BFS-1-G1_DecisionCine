@@ -18,7 +18,7 @@
         <p class="textoDetalleContenido">{{ contenidoFiltrado.contenido_sinopsis }}</p>
         <p class="textoDetalleContenido">Duración: {{ contenidoFiltrado.contenido_duracion }} min</p>  
         <p class="textoDetalleContenido">Puntuación: {{ contenidoFiltrado.contenido_puntuacion }}/10</p> 
-        <p class="textoDetalleContenido">Fecha de estreno: {{ contenidoFiltrado.contenido_fecha_estreno }}</p>     
+        <p class="textoDetalleContenido">Fecha de estreno: {{ contenidoFiltrado.contenido_fecha_estreno | date: 'dd/MM/yyyy' }}</p>     
       </div>
     </o-grid-item>
   </o-grid>
