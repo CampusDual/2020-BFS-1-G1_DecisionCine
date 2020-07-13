@@ -14,6 +14,10 @@
     <GeneratedKey>contenido_reparto_rol_id</GeneratedKey>
     <Queries>
         <Query id="default">
+            <AmbiguousColumns>
+                <AmbiguousColumn name="reparto_id" prefix="crr"
+                                 databaseName="reparto_id" />
+            </AmbiguousColumns>
             <Sentence>
                 <![CDATA[
                     SELECT
