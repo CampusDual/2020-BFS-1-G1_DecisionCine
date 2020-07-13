@@ -7,6 +7,7 @@ import {ContenidoHomeComponent} from "./contenido-home/contenido-home.component"
 import { SharedModule } from 'app/shared/shared.module';
 import { ContenidoDetailComponent } from './contenido-detail/contenido-detail.component';
 
+
 @NgModule({
   imports: [
     CommonModule,
@@ -16,7 +17,9 @@ import { ContenidoDetailComponent } from './contenido-detail/contenido-detail.co
   ],
   declarations: [
     ContenidoHomeComponent,
-    ContenidoDetailComponent
+    ContenidoDetailComponent,
+
   ]
+
 })
 export class ContenidoModule { }
