@@ -37,4 +37,14 @@ controls="none">
   </mat-card>
 </o-list>
 </div>
+
+<o-list #repartoList>
+  <o-list-item *ngFor="let unReparto of repartosFiltrado">
+
+    <o-list-item-avatar avatar="{{ unReparto.reparto_foto }}" title="{{ unReparto.reparto_nombre + unReparto.reparto_apellido_1}}">
+    </o-list-item-avatar>
+
+  </o-list-item>
+
+</o-list>
 </o-form> 
