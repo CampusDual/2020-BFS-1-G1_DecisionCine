@@ -391,6 +391,55 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "contenido -R (complex)",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "demouser",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"filter\": {\r\n    \t\"contenido_id\": 1\r\n    },\r\n    \"columns\": [\r\n        \"contenido_id\",\r\n        \"contenido_titulo\",\r\n        \"contenido_sinopsis\",\r\n        \"contenido_foto\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:33333/decision-cine/services/rest/contenidos/contenido/search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "33333",
+							"path": [
+								"decision-cine",
+								"services",
+								"rest",
+								"contenidos",
+								"contenido",
+								"search"
+							]
+						},
+						"description": "Consulta de contenido por ID de contenido"
+					},
+					"response": []
 				}
 			],
 			"protocolProfileBehavior": {}
@@ -626,6 +675,108 @@
 								"rest",
 								"noticias",
 								"noticia"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Contenido Reparto Rol",
+			"item": [
+				{
+					"name": "repartosPorContenido -R (complex)",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "demouser",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"filter\": {\n    \t\"contenido_id\": 6\n    },\n    \"columns\": [\n        \"reparto_id\",\n        \"reparto_nombre\",\n        \"rol_nombre\",\n        \"contenido_id\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:33333/decision-cine/services/rest/contenidosRepartoRol/repartosPorContenido/search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "33333",
+							"path": [
+								"decision-cine",
+								"services",
+								"rest",
+								"contenidosRepartoRol",
+								"repartosPorContenido",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "contenidosPorReparto -R (complex) Copy",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "demouser",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "demo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"filter\": {\n    \t\"reparto_id\": 1\n    },\n    \"columns\": [\n        \"contenido_id\",\n        \"reparto_id\",\n        \"reparto_nombre\",\n        \"contenido_titulo\",\n        \"contenido_foto\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:33333/decision-cine/services/rest/contenidosRepartoRol/contenidosPorReparto/search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "33333",
+							"path": [
+								"decision-cine",
+								"services",
+								"rest",
+								"contenidosRepartoRol",
+								"contenidosPorReparto",
+								"search"
 							]
 						}
 					},
