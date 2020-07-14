@@ -23,7 +23,6 @@ export class ContenidoDetailComponent implements OnInit {
 				console.log(response);
 				this.comentarioFiltrado = response["data"];
 			})
-
 		}
 
 		)
