@@ -1,19 +1,24 @@
-<o-grid
-  pageable="no"
-  controls="no"
-  cols="4"
->
-  <o-grid-item colspan="1" rowspan="1">
-    <div fxFill class="fondoAzulItemGrid">
-      <o-image data="{{repartoFiltrado.reparto_foto}}" style="margin-top:8px" show-controls="false"></o-image>
-    </div>
-  </o-grid-item>
-  <o-grid-item colspan="3" rowspan="1">
-    <div fxFill class="fondoAzulItemGrid">
-      <p><b>Nombre: </b>{{ repartoFiltrado.reparto_nombre }}</p>
-      <p><b>Primer apellido</b>:{{ repartoFiltrado.reparto_apellido_1 }}</p>
-      <p><b>Biografia:</b> {{ repartoFiltrado.reparto_bibliografia }}</p>
-     
-    </div>
-  </o-grid-item>
-</o-grid>
+<div class="bodyDetalleReparto">
+  <o-form>
+  <div class="contenedorDetalle">
+    <o-grid
+    pageable="no"
+    controls="no"
+    cols="4"
+    show-footer="no">
+
+    <o-grid-item colspan="1" rowspan="1">
+      <div class="imagenDetalle">
+        <o-image data="{{repartoFiltrado.reparto_foto}}" class="imagenContenidoDetalle" show-controls="false"></o-image>
+      </div>
+    </o-grid-item>
+    <o-grid-item colspan="3" rowspan="1">
+      <div class="textoDetalle">
+        <p class="tituloDetalle">{{ repartoFiltrado.reparto_nombre }} {{ repartoFiltrado.reparto_apellido_1 }} </p>
+        <p class="textoDetalleContenido">{{ repartoFiltrado.reparto_bibliografia }}</p>    
+      </div>
+    </o-grid-item>
+  </o-grid>
+  </div>
+  </o-form> 
+</div>
