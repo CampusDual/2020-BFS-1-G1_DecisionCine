@@ -1,26 +1,31 @@
-<div>
-<o-list #list 
-attr="noticia_id" 
-columns="noticia_id;noticia_usuario_id;noticia_descripcion;noticia_fecha_alta;noticia_fecha_modificacion;noticia_titulo"
-service="noticias"
-entity="noticia"
-title="Noticias"
-quick-filter="false"
-controls="none">
+<div class="bodyNoticias">
+  <div class="bodyListadoNoticias">
+    <o-list #list 
+        attr="noticia_id" 
+        columns="noticia_id;noticia_usuario_id;noticia_descripcion;noticia_fecha_alta;noticia_fecha_modificacion;noticia_titulo"
+        service="noticias"
+        entity="noticia"
+        title="Noticias"
+        quick-filter="false"
+        controls="none">
 
-  <mat-card *ngFor="let row of list.dataArray" [o-list-item]="row">
-    <mat-card-header>
-      <div mat-card-avatar>
-       
-      </div>
-      <mat-card-title>{{ row.noticia_titulo }}</mat-card-title>
-      <mat-card-subtitle>{{ row.noticia_descripcion }}</mat-card-subtitle>
-    </mat-card-header>
-  </mat-card>
+      <mat-card *ngFor="let row of list.dataArray" [o-list-item]="row">
+        <mat-card-header>
+          <div mat-card-avatar>
+          
+          </div>
+          <mat-card-title>
+            <div  class="tituloNoticia">
+              {{ row.noticia_titulo }}
+            </div>
+          </mat-card-title>
+          <mat-card-subtitle class="cuerpoNoticia">{{ row.noticia_descripcion }}</mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
 
-</o-list>
+    </o-list>
+  </div>
 </div>
-
 
 
 
