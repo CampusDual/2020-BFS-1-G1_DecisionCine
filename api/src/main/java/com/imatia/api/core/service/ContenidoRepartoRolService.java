@@ -27,4 +27,9 @@ public interface ContenidoRepartoRolService {
 	public EntityResult rolInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException;
 	public EntityResult rolUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
 	public EntityResult rolDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
+
+	// CUSTOM_QUERY REPARTOS_POR_CONTENIDO
+	public EntityResult repartosPorContenidoQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException;
+	// CUSTOM_QUERY CONTENIDOS_POR_REPARTO
+	public EntityResult contenidosPorRepartoQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException;
 }

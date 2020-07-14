@@ -36,6 +36,8 @@
             <AmbiguousColumns>
                 <AmbiguousColumn name="reparto_id" prefix="crr"
                                  databaseName="reparto_id" />
+                <AmbiguousColumn name="contenido_id" prefix="crr"
+                                 databaseName="contenido_id" />
             </AmbiguousColumns>
             <Sentence>
                 <![CDATA[

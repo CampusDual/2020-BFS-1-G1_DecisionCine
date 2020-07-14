@@ -93,4 +93,18 @@ public class ContenidoRepartoRolServiceImpl implements ContenidoRepartoRolServic
 	public EntityResult rolDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
 		return this.daoHelper.delete(this.rolDao, keyMap);
 	}
+
+	// CUSTOM_QUERY REPARTOS_POR_CONTENIDO
+	@Override
+	public EntityResult repartosPorContenidoQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException {
+		return this.daoHelper.query(this.contenidoRepartoRolDao, keyMap, attrList, this.contenidoRepartoRolDao.REPARTOS_POR_CONTENIDO);
+	}
+
+	// CUSTOM_QUERY CONTENIDOS_POR_REPARTO
+	@Override
+	public EntityResult contenidosPorRepartoQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException {
+		return this.daoHelper.query(this.contenidoRepartoRolDao, keyMap, attrList, this.contenidoRepartoRolDao.CONTENIDOS_POR_REPARTO);
+	}
+
+
 }
