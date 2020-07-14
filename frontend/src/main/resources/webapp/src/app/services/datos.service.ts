@@ -16,6 +16,7 @@ export class DatosService {
 
   private apiEndPointContenido = CONFIG.apiEndpoint + "/contenidos/contenido/search";
   private apiEndPointComentario = CONFIG.apiEndpoint + "/comentarios/comentario/search";
+  private apiEndPointReparto = CONFIG.apiEndpoint + "/repartos/reparto/search";
 
   constructor(private http: HttpClient) { }
 
@@ -25,7 +26,7 @@ export class DatosService {
         "contenido_id": +content_id
       },
       "columns": [
-        "contenido_id", "contenido_titulo", "contenido_sinopsis", "contenido_foto"
+        "contenido_id", "contenido_tipo_contenido_id", "contenido_sinopsis","contenido_puntuacion","contenido_genero_id", "contenido_fecha_estreno","contenido_titulo","contenido_duracion", "contenido_foto","contenido_capitulos"
       ]
     }
     return this.http.post<any>(this.apiEndPointContenido, postBody, this.httOptions);
@@ -40,6 +41,17 @@ getComentariosBycometarioId(contenido_id: Number): Observable<RespuestaBackOntim
       ]
     }
     return this.http.post<any>(this.apiEndPointComentario, postBody, this.httOptions);
+  }
+  getRepartoById(reparto_id: Number): Observable<RespuestaBackOntimize> {
+    const postBody = {
+      "filter": {
+        "reparto_id": +reparto_id
+      },
+      "columns": [
+        "reparto_id", "reparto_nombre","reparto_apellido_1","reparto_apellido_2","reparto_bibliografia","reparto_foto"
+      ]
+    }
+    return this.http.post<any>(this.apiEndPointReparto, postBody, this.httOptions);
   }
 
 }
