@@ -1,40 +1,49 @@
-<p>asdd </p>
-<o-form> 
-<o-grid
-  pageable="no"
-  controls="no"
-  cols="4">
-  <o-grid-item colspan="1" rowspan="1">
-    <div fxFill class="fondoAzulItemGrid">
-      <o-image data="{{contenidoFiltrado.contenido_foto}}" style="margin-top:8px" show-controls="false"></o-image>
-    </div>
-  </o-grid-item>
-  <o-grid-item colspan="3" rowspan="1">
-    <div fxFill class="fondoAzulItemGrid">
-      <p>Titulo: {{ contenidoFiltrado.contenido_titulo }}</p>
-      <p>Sinopsis: {{ contenidoFiltrado.contenido_sinopsis }}</p>    
-    </div>
-  </o-grid-item>
-</o-grid>
- 
-  
- <div> 
-<o-list 
-attr="comentario_id" 
-columns="comentario_id;contenido_id;usuario_id;descripcion;fecha"
-service="comentarios"
-entity="comentario"
-quick-filter="false"
-controls="none">
+<div class="bodyDetalle">
+  <o-form>
+  <div class="contenedorDetalle">
+    <o-grid
+    pageable="no"
+    controls="no"
+    cols="4"
+    show-footer="no">
 
-  <mat-card *ngFor="let comentario of comentarioFiltrado" >
-    <mat-card-header>
-      <div mat-card-avatar>
+    <o-grid-item colspan="1" rowspan="1">
+      <div class="imagenDetalle">
+        <o-image data="{{contenidoFiltrado.contenido_foto}}" class="imagenContenidoDetalle" show-controls="false"></o-image>
       </div>
-      <mat-card-subtitle>{{ comentario.descripcion}}</mat-card-subtitle>
+    </o-grid-item>
+    <o-grid-item colspan="3" rowspan="1">
+      <div class="textoDetalle">
+        <p class="tituloDetalle">{{ contenidoFiltrado.contenido_titulo }}</p>
+        <p class="textoDetalleContenido">{{ contenidoFiltrado.contenido_sinopsis }}</p>
+        <p class="textoDetalleContenido">Duración: {{ contenidoFiltrado.contenido_duracion }} min</p>  
+        <p class="textoDetalleContenido">Puntuación: {{ contenidoFiltrado.contenido_puntuacion }}/10</p> 
+        <p class="textoDetalleContenido">Fecha de estreno: {{ contenidoFiltrado.contenido_fecha_estreno | date: 'dd/MM/yyyy' }}</p>     
+      </div>
+    </o-grid-item>
+  </o-grid>
+  </div>
+  
+  
+    
+  <div class="comentariosDetalle"> 
+    <p class="tituloComentario">Comentarios:</p>
+    <o-list 
+    attr="comentario_id" 
+    columns="comentario_id;contenido_id;usuario_id;descripcion;fecha"
+    service="comentarios"
+    entity="comentario"
+    quick-filter="false"
+    controls="none">
 
-    </mat-card-header>
-  </mat-card>
-</o-list>
+      <div class="listadoComentarios">
+        <mat-card *ngFor="let comentario of comentarioFiltrado" >
+          <mat-card-header>
+            <mat-card-subtitle>{{ comentario.descripcion}}</mat-card-subtitle>
+          </mat-card-header>
+        </mat-card>
+      </div>
+    </o-list>
+  </div>
+  </o-form> 
 </div>
-</o-form> 

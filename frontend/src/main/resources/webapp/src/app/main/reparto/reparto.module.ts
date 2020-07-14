@@ -3,7 +3,11 @@ import { CommonModule } from '@angular/common';
 
 import { RepartoRoutingModule } from './reparto-routing.module';
 import {OntimizeWebModule} from 'ontimize-web-ngx';
-import { RepartoHomeComponent } from './reparto-home/reparto-home.component';
+import {RepartoHomeComponent} from "./reparto-home/reparto-home.component";
+import { RepartoDetailComponent } from './reparto-detail/reparto-detail.component';
+
+
+
 
 
 @NgModule({
@@ -13,7 +17,8 @@ import { RepartoHomeComponent } from './reparto-home/reparto-home.component';
     RepartoRoutingModule
   ],
   declarations: [
-	RepartoHomeComponent
+	RepartoHomeComponent,
+	RepartoDetailComponent
 ]
 })
 export class RepartoModule { }
