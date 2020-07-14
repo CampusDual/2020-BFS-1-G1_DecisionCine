@@ -16,6 +16,7 @@ public class ContenidoRepartoRolDao extends OntimizeJdbcDaoSupport {
 	public static final String USUARIO_ID = "usuario_id";
 	public static final String ROL_ID = "rol_id";
 	public static final String CONTENIDO_ID = "contenido_id";
-
+	public static final String REPARTOS_POR_CONTENIDO = "repartosPorContenido";
+	public static final String CONTENIDOS_POR_REPARTO = "contenidosPorReparto";
 
 }
