@@ -21,7 +21,7 @@ export class ContenidoDetailComponent implements OnInit {
 				console.log(response);
 				this.contenidoFiltrado = response["data"][0];
 			})
-			dataService.getComentariosBycometarioId(params["CONTENIDOID"]).subscribe(response => {
+			dataService.getComentariosByContentId(params["CONTENIDOID"]).subscribe(response => {
 				console.log(response);
 				this.comentarioFiltrado = response["data"];
 				this.inicializarcomentario(this.comentarioFiltrado.length);
