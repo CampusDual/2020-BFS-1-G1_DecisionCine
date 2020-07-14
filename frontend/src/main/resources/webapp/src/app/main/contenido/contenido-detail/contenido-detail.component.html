@@ -24,6 +24,38 @@
   </o-grid>
   </div>
   
+  <div class="detallesReparto">
+    <p class="tituloComentario">Reparto:</p>
+    <o-list 
+    attr="contenido_id" 
+    columns="contenido_id;contenido_genero_id;contenido_tipo_contenido_id;contenido_titulo;contenido_sinopsis;contenido_duracion;contenido_puntuacion;contenido_fecha_estreno;contenido_capitulos;contenido_foto"
+    service="contenidos"
+    entity="contenido"
+    quick-filter="false"
+    controls="none">
+
+      <div class="listadoComentarios">
+       <div *ngIf="mostrarcomentario; else nohayreparto"> 
+           <mat-card *ngFor="let comentario of contenidoRepartoFiltrado" >
+    	        <mat-card-header>
+     		        <div mat-card-avatar>
+      		      </div>
+      		      <mat-card-subtitle>{{ contenidoRepartoFiltrado.reparto_foto}}</mat-card-subtitle>		
+    	        </mat-card-header>
+          </mat-card>
+         </div> 
+    <ng-template #nohayreparto> 
+      <mat-card >
+		    <mat-card-header >
+     		 <div mat-card-avatar>
+      	  </div>
+      		<mat-card-subtitle>No hay reparto registrado</mat-card-subtitle>		
+    	  </mat-card-header>
+     </mat-card>
+  </ng-template> 
+      </div>
+    </o-list>
+  </div>
   
     
   <div class="comentariosDetalle"> 

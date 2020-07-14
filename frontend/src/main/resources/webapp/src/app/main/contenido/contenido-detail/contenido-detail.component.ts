@@ -12,6 +12,7 @@ export class ContenidoDetailComponent implements OnInit {
 
 	public contenidoFiltrado;
 	public comentarioFiltrado;
+	public contenidoRepartoFiltrado;
 	public mostrarcomentario:boolean;
 	
 	
@@ -25,6 +26,11 @@ export class ContenidoDetailComponent implements OnInit {
 				console.log(response);
 				this.comentarioFiltrado = response["data"];
 				this.inicializarcomentario(this.comentarioFiltrado.length);
+			})
+			dataService.getRepartoByContentId(params["CONTENIDOID"]).subscribe(response => {
+				console.log(response);
+				this.contenidoRepartoFiltrado = response["data"];
+				this.inicializarcomentario(this.contenidoRepartoFiltrado.length);
 			})
 
 		}
