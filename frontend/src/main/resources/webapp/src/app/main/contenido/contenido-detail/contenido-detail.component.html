@@ -37,11 +37,24 @@
     controls="none">
 
       <div class="listadoComentarios">
-        <mat-card *ngFor="let comentario of comentarioFiltrado" >
-          <mat-card-header>
-            <mat-card-subtitle>{{ comentario.descripcion}}</mat-card-subtitle>
-          </mat-card-header>
-        </mat-card>
+       <div *ngIf="mostrarcomentario; else nohaycomentarios"> 
+           <mat-card *ngFor="let comentario of comentarioFiltrado" >
+    	        <mat-card-header>
+     		        <div mat-card-avatar>
+      		      </div>
+      		      <mat-card-subtitle>{{ comentario.descripcion}}</mat-card-subtitle>		
+    	        </mat-card-header>
+          </mat-card>
+         </div> 
+    <ng-template #nohaycomentarios> 
+      <mat-card >
+		    <mat-card-header >
+     		 <div mat-card-avatar>
+      	  </div>
+      		<mat-card-subtitle>No hay comentarios disponibles</mat-card-subtitle>		
+    	  </mat-card-header>
+     </mat-card>
+  </ng-template> 
       </div>
     </o-list>
   </div>
