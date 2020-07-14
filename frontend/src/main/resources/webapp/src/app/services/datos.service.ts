@@ -17,6 +17,7 @@ export class DatosService {
   private apiEndPointContenido = CONFIG.apiEndpoint + "/contenidos/contenido/search";
   private apiEndPointComentario = CONFIG.apiEndpoint + "/comentarios/comentario/search";
   private apiEndPointReparto = CONFIG.apiEndpoint + "/repartos/reparto/search";
+ // private apiEndPointRepartoContenido = CONFIG.apiEndpoint + "/repartos/reparto/search";
 
   constructor(private http: HttpClient) { }
 
@@ -31,7 +32,7 @@ export class DatosService {
     }
     return this.http.post<any>(this.apiEndPointContenido, postBody, this.httOptions);
   }
-getComentariosBycometarioId(contenido_id: Number): Observable<RespuestaBackOntimize> {
+getComentariosByContentId(contenido_id: Number): Observable<RespuestaBackOntimize> {
     const postBody = {
       "filter": {
         "contenido_id": +contenido_id
@@ -42,6 +43,7 @@ getComentariosBycometarioId(contenido_id: Number): Observable<RespuestaBackOntim
     }
     return this.http.post<any>(this.apiEndPointComentario, postBody, this.httOptions);
   }
+
   getRepartoById(reparto_id: Number): Observable<RespuestaBackOntimize> {
     const postBody = {
       "filter": {
@@ -53,6 +55,34 @@ getComentariosBycometarioId(contenido_id: Number): Observable<RespuestaBackOntim
     }
     return this.http.post<any>(this.apiEndPointReparto, postBody, this.httOptions);
   }
+
+//metodo para incrustar los actores de una pelicula en la ficha de detalle contenido
+getRepartoByContentId(contenido_id: Number): Observable<RespuestaBackOntimize> {
+    const postBody = {
+      "filter": {
+        "contenido_id": +contenido_id
+      },
+      "columns": [
+       "reparto_id", "reparto_nombre","reparto_apellido_1","reparto_apellido_2","reparto_bibliografia","reparto_foto"
+      ]
+    }
+    return this.http.post<any>(this.apiEndPointReparto, postBody, this.httOptions);
+  }
+
+
+//metodo para incrustar las peliculas de un actor/director en la ficha de detalle reparto
+getContentByRepartoId(contenido_id: Number): Observable<RespuestaBackOntimize> {
+    const postBody = {
+      "filter": {
+        "contenido_id": +contenido_id
+      },
+      "columns": [
+       "reparto_id", "reparto_nombre","reparto_apellido_1","reparto_apellido_2","reparto_bibliografia","reparto_foto"
+      ]
+    }
+    return this.http.post<any>(this.apiEndPointReparto, postBody, this.httOptions);
+  }
+
 
 }
 
