@@ -14,6 +14,7 @@ export class ContenidoDetailComponent implements OnInit {
 	public comentarioFiltrado;
 	public contenidoRepartoFiltrado;
 	public mostrarcomentario:boolean;
+	public mostrarReparto: boolean;
 	
 	
 	constructor(activatedRoute: ActivatedRoute, dataService: DatosService) {
@@ -30,7 +31,7 @@ export class ContenidoDetailComponent implements OnInit {
 			dataService.getRepartoByContentId(params["CONTENIDOID"]).subscribe(response => {
 				console.log(response);
 				this.contenidoRepartoFiltrado = response["data"];
-				this.inicializarcomentario(this.contenidoRepartoFiltrado.length);
+				this.inicializarReparto(this.contenidoRepartoFiltrado.length);
 			})
 
 		}
@@ -50,6 +51,18 @@ export class ContenidoDetailComponent implements OnInit {
 		}else {
 			console.log ("hay: "+ cantidad);
 			this.mostrarcomentario=true;
+		}
+	}
+
+		
+	inicializarReparto(cantidad:number){
+		console.log("entrando en inicializarReparto: " + cantidad);
+		if(cantidad==undefined){
+			console.log ("no hay reparto");
+			this.mostrarReparto=false;
+		}else {
+			console.log ("hay: "+ cantidad);
+			this.mostrarReparto=true;
 		}
 	}
 

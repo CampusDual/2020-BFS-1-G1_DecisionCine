@@ -35,8 +35,8 @@
     controls="none">
 
       <div class="listadoComentarios">
-       <div *ngIf="mostrarcomentario; else nohayreparto"> 
-           <mat-card *ngFor="let comentario of contenidoRepartoFiltrado" >
+       <div *ngIf="mostrarReparto; else nohayreparto"> 
+           <mat-card *ngFor="let reparto of contenidoRepartoFiltrado" >
     	        <mat-card-header>
      		        <div mat-card-avatar>
       		      </div>
