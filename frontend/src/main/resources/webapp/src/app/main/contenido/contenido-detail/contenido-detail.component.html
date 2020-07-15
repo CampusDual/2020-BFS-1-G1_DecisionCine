@@ -25,47 +25,26 @@
   </div>
   
   <div class="detallesReparto">
-    <!--<o-list 
-    attr="contenido_id" 
-    columns="contenido_id;contenido_genero_id;contenido_tipo_contenido_id;contenido_titulo;contenido_sinopsis;contenido_duracion;contenido_puntuacion;contenido_fecha_estreno;contenido_capitulos;contenido_foto"
-    service="contenidos"
-    entity="contenido"
-    quick-filter="false"
-    controls="none">
-
-      <div class="listadoComentarios">
-       <div *ngIf="mostrarReparto; else nohayreparto"> 
-           <mat-card *ngFor="let reparto of contenidoRepartoFiltrado" >
-    	        <mat-card-header>
-     		        <div mat-card-avatar>
-                  {{ contenidoRepartoFiltrado.reparto_foto}}
-      		      </div>
-      		      <mat-card-subtitle>{{ contenidoRepartoFiltrado.reparto_nombre}} {{ contenidoRepartoFiltrado.reparto_apellido_1}}</mat-card-subtitle>		
-    	        </mat-card-header>
-          </mat-card>
-         </div> 
-    <ng-template #nohayreparto> 
-      <mat-card >
-		    <mat-card-header >
-     		 <div mat-card-avatar>
-      	  </div>
-      		<mat-card-subtitle>No hay reparto registrado</mat-card-subtitle>		
-    	  </mat-card-header>
-     </mat-card>
-  </ng-template> 
-      </div>
-    </o-list> -->
-
-    <o-grid
+    <p class="tituloComentario">Reparto:</p>
+    <o-grid #gridRepartoEnContenido
+    columns="reparto_id;reparto_nombre;reparto_apellido_1;reparto_apellido_2;reparto_bibliografia;reparto_foto"
+    keys="reparto_id"
+    service="repartos"
+    entity="reparto"
     pageable="no"
     controls="no"
     cols="4"
-    show-footer="no">
+    show-footer="no"
+    (onClick)="onRedirectToDetail($event)">
 
     <o-grid-item *ngFor="let reparto of contenidoRepartoFiltrado">
       <div class="imagenRepartoEnContenido">
-        <!-- <o-image data="{{contenidoRepartoFiltrado.reparto_foto}}" class="imagenContenidoDetalle" show-controls="false"></o-image> -->
-        <p class="tituloDetalle">{{ contenidoRepartoFiltrado.reparto_nombre }} {{ contenidoRepartoFiltrado.reparto_apellido_1 }}</p>
+        <div  class="fotoRepartoEnContenido">
+          <o-image data="{{reparto.reparto_foto}}" show-controls="false"></o-image>
+        </div>
+        <div class="textoRepartoEnContenido">
+          <p>{{ reparto.reparto_nombre }} {{ reparto.reparto_apellido_1 }}</p>
+        </div>
       </div>
     </o-grid-item>
   </o-grid>
