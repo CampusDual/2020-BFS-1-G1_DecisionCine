@@ -25,8 +25,7 @@
   </div>
   
   <div class="detallesReparto">
-    <p class="tituloComentario">Reparto:</p>
-    <o-list 
+    <!--<o-list 
     attr="contenido_id" 
     columns="contenido_id;contenido_genero_id;contenido_tipo_contenido_id;contenido_titulo;contenido_sinopsis;contenido_duracion;contenido_puntuacion;contenido_fecha_estreno;contenido_capitulos;contenido_foto"
     service="contenidos"
@@ -39,8 +38,9 @@
            <mat-card *ngFor="let reparto of contenidoRepartoFiltrado" >
     	        <mat-card-header>
      		        <div mat-card-avatar>
+                  {{ contenidoRepartoFiltrado.reparto_foto}}
       		      </div>
-      		      <mat-card-subtitle>{{ contenidoRepartoFiltrado.reparto_foto}}</mat-card-subtitle>		
+      		      <mat-card-subtitle>{{ contenidoRepartoFiltrado.reparto_nombre}} {{ contenidoRepartoFiltrado.reparto_apellido_1}}</mat-card-subtitle>		
     	        </mat-card-header>
           </mat-card>
          </div> 
@@ -54,7 +54,21 @@
      </mat-card>
   </ng-template> 
       </div>
-    </o-list>
+    </o-list> -->
+
+    <o-grid
+    pageable="no"
+    controls="no"
+    cols="4"
+    show-footer="no">
+
+    <o-grid-item *ngFor="let reparto of contenidoRepartoFiltrado">
+      <div class="imagenRepartoEnContenido">
+        <!-- <o-image data="{{contenidoRepartoFiltrado.reparto_foto}}" class="imagenContenidoDetalle" show-controls="false"></o-image> -->
+        <p class="tituloDetalle">{{ contenidoRepartoFiltrado.reparto_nombre }} {{ contenidoRepartoFiltrado.reparto_apellido_1 }}</p>
+      </div>
+    </o-grid-item>
+  </o-grid>
   </div>
   
     
