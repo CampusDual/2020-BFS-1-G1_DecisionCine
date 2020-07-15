@@ -14,14 +14,14 @@ export class DatosService {
     })
   }
 
-  private apiEndPointContenido = CONFIG.apiEndpoint + "/contenidos/contenido/search";
-  private apiEndPointComentario = CONFIG.apiEndpoint + "/comentarios/comentario/search";
-  private apiEndPointReparto = CONFIG.apiEndpoint + "/repartos/reparto/search";
- private apiEndPointContenidosPorReparto = CONFIG.apiEndpoint + "/contenidosRepartoRol/contenidosPorReparto/search";
- private apiEndPointRepartosPorContenido = CONFIG.apiEndpoint + "/contenidosRepartoRol/repartosPorContenido/search";
+ private apiEndPointContenido = CONFIG.apiEndpoint + "/contenidos/contenido/search";
+ private apiEndPointComentario = CONFIG.apiEndpoint + "/comentarios/comentario/search";
+ private apiEndPointReparto = CONFIG.apiEndpoint + "/repartos/reparto/search";
+ private apiEndPointContenidosEnUnReparto = CONFIG.apiEndpoint + "/contenidosRepartoRol/contenidosPorReparto/search";  //ficha detalle reparto
+ private apiEndPointRepartosEnUnContenido = CONFIG.apiEndpoint + "/contenidosRepartoRol/repartosPorContenido/search";   //ficha detalle contenido
 
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getContentById(content_id: Number): Observable<RespuestaBackOntimize> {
     const postBody = {
@@ -68,7 +68,7 @@ getRepartoByContentId(contenido_id: Number): Observable<RespuestaBackOntimize> {
        "reparto_id", "reparto_nombre","reparto_apellido_1","reparto_apellido_2","reparto_bibliografia","reparto_foto"
       ]
     }
-    return this.http.post<any>(this.apiEndPointContenidosPorReparto, postBody, this.httOptions);
+    return this.http.post<any>(this.apiEndPointRepartosEnUnContenido, postBody, this.httOptions);
   }
 
 
@@ -82,7 +82,7 @@ getContentByRepartoId(reparto_id: Number): Observable<RespuestaBackOntimize> {
          "contenido_id", "contenido_tipo_contenido_id", "contenido_sinopsis","contenido_puntuacion","contenido_genero_id", "contenido_fecha_estreno","contenido_titulo","contenido_duracion", "contenido_foto","contenido_capitulos"
       ]
     }
-    return this.http.post<any>(this.apiEndPointRepartosPorContenido, postBody, this.httOptions);
+    return this.http.post<any>(this.apiEndPointContenidosEnUnReparto, postBody, this.httOptions);
   }
 
 
