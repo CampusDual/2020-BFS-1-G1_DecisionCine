@@ -8,8 +8,6 @@ import { OListItemDirective, OButtonComponent } from 'ontimize-web-ngx';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
-  
-  private idDetalle: Number;
 
   constructor(    
     private router: Router,
@@ -23,17 +21,21 @@ export class MainComponent implements OnInit {
     this.router.navigate(['../', 'login'], { relativeTo: this.actRoute });
   }
 
-  onRecogerValor(event: OListItemDirective) {
+  onRecogerValor($eventResult) {
     console.log("entrando en: onRecogerValor()");
-    console.log(event.getItemData());
-    console.log(event.getItemData()['contenido_id']);
-    this.idDetalle = event.getItemData()['contenido_id'];
+    console.log(event);
+    this.router.navigate(["/main/contenido/" + $eventResult.newValue],);
+    
   }
 
+  /*
   onRedirectToDetail(event: OButtonComponent) {
-    this.idDetalle = 1;
     console.log("entrando en: onRedirectToDetail()");
-    this.router.navigateByUrl("/main/contenido/" + this.idDetalle);
+    this.router.navigateByUrl("/main/contenido/" + event());
   }
+
+*/
+
+
 
 }
