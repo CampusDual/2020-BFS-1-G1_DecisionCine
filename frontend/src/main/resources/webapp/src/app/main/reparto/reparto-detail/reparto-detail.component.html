@@ -1,5 +1,6 @@
 <div class="bodyDetalleReparto">
   <o-form>
+
   <div class="contenedorDetalle">
     <o-grid
     pageable="no"
@@ -20,5 +21,32 @@
     </o-grid-item>
   </o-grid>
   </div>
+
+  <div class="detallesReparto">
+    <p class="tituloComentario">Contenido:</p>
+    <o-grid #gridContenidoEnReparto
+    columns="contenido_id;contenido_genero_id;contenido_tipo_contenido_id;contenido_titulo;contenido_sinopsis;contenido_duracion;contenido_puntuacion;contenido_fecha_estreno;contenido_capitulos;contenido_foto"
+    keys="contenido_id"
+    service="contenidos"
+    entity="contenido"
+    pageable="no"
+    controls="no"
+    cols="4"
+    show-footer="no"
+    (onClick)="onRedirectToDetail($event)">
+
+    <o-grid-item *ngFor="let contenido of repartoContenidoFiltrado">
+      <div class="imagenRepartoEnContenido">
+        <div  class="fotoRepartoEnContenido">
+          <o-image data="{{contenido.contenido_foto}}" show-controls="false"></o-image>
+        </div>
+        <div class="textoRepartoEnContenido">
+          <p>{{ contenido.contenido_titulo }}</p>
+        </div>
+      </div>
+    </o-grid-item>
+  </o-grid>
+  </div>
+
   </o-form> 
 </div>

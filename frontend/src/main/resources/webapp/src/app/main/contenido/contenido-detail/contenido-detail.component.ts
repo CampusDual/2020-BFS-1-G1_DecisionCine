@@ -85,7 +85,6 @@ export class ContenidoDetailComponent implements OnInit {
 	idDetalle = event.getItemData()['reparto_id'];
 	this.router.navigateByUrl("/main/reparto/" + idDetalle);
 	}
-
 }
 
 
