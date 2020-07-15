@@ -26,7 +26,7 @@ export class DatosService {
   getContentById(content_id: Number): Observable<RespuestaBackOntimize> {
     const postBody = {
       "filter": {
-        "contenido_id": content_id
+        "contenido_id": +content_id
       },
       "columns": [
         "contenido_id", "contenido_tipo_contenido_id", "contenido_sinopsis","contenido_puntuacion","contenido_genero_id", "contenido_fecha_estreno","contenido_titulo","contenido_duracion", "contenido_foto","contenido_capitulos"
@@ -37,7 +37,7 @@ export class DatosService {
 getComentariosByContentId(contenido_id: Number): Observable<RespuestaBackOntimize> {
     const postBody = {
       "filter": {
-        "contenido_id": contenido_id
+        "contenido_id": +contenido_id
       },
       "columns": [
        "comentario_id", "contenido_id","usuario_id","descripcion","fecha"
@@ -49,7 +49,7 @@ getComentariosByContentId(contenido_id: Number): Observable<RespuestaBackOntimiz
   getRepartoById(reparto_id: Number): Observable<RespuestaBackOntimize> {
     const postBody = {
       "filter": {
-        "reparto_id": reparto_id
+        "reparto_id": +reparto_id
       },
       "columns": [
         "reparto_id", "reparto_nombre","reparto_apellido_1","reparto_apellido_2","reparto_bibliografia","reparto_foto"
@@ -62,7 +62,7 @@ getComentariosByContentId(contenido_id: Number): Observable<RespuestaBackOntimiz
 getRepartoByContentId(contenido_id: Number): Observable<RespuestaBackOntimize> {
     const postBody = {
       "filter": {
-        "contenido_id": contenido_id
+        "contenido_id": +contenido_id
       },
       "columns": [
        "reparto_id", "reparto_nombre","reparto_apellido_1","reparto_apellido_2","reparto_bibliografia","reparto_foto"
@@ -76,7 +76,7 @@ getRepartoByContentId(contenido_id: Number): Observable<RespuestaBackOntimize> {
 getContentByRepartoId(reparto_id: Number): Observable<RespuestaBackOntimize> {
     const postBody = {
       "filter": {
-        "reparto_id": reparto_id
+        "reparto_id": +reparto_id
       },
       "columns": [
          "contenido_id", "contenido_tipo_contenido_id", "contenido_sinopsis","contenido_puntuacion","contenido_genero_id", "contenido_fecha_estreno","contenido_titulo","contenido_duracion", "contenido_foto","contenido_capitulos"
