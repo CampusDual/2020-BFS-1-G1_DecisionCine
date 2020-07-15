@@ -1,1 +1,263 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* -------------------------------------- MENU SUPERIOR MAIN --------------------------------------------*/
+#bannerSuperior{
+  width: 100%;
+  height: 15%;
+}
+
+/* contendedor del icono del menu*/
+.contenedorNombrePagina{
+  width: 20%;
+  height: 100%;
+  float: left;
+  background-color: #170e13; //marga
+}
+
+/* contendedor del menu de opciones*/
+.menuSuperior{
+  height:100%;
+  width: 60%;
+  float: left;
+}
+
+/* contendedor del buscador de la lupa*/
+.contenedorBuscador{
+  width: 20%;
+  height: 100%;
+  float: left;
+ background-color: #6868ad ;//marga
+}
+
+/* banner de opciones*/
+.buscadorSuperior{
+  margin-left: 30px;
+  margin-top: 10%;
+  float: left;
+  width: 80%;
+  height: 50%;
+  margin-right: 20%;
+}
+
+.nombrePagina{
+  width: 50%;
+  margin-top: 5%;
+  margin-left: 5%;
+  float: left;
+}
+
+// barra Opciones Menu
+
+.mat-toolbar.mat-primary{
+  opacity:100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(315deg, #6868ad 74%, #170e13 0%); //marga
+}
+
+o-bar-menu-nested {
+  margin-left: 200px;
+}
+
+/* -------------------------------------- PARRILLAS --------------------------------------------*/
+
+#bodyHome{
+  background-color: white;
+}
+
+.contenedorParrillas{
+  width: 90%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+}
+.parrilla{
+  width: 90%;
+  margin-left: 5%;
+  height: 50%;
+  margin-top: 20px;
+}
+
+.contenedor{
+  width: 90%;
+  height: 90%;
+  margin: 5%;
+  background: linear-gradient(315deg, #7a7adb 0%, #170e13 74%); //marga
+}
+
+.columnImagen{
+  width: 60%;
+  float: left;
+  height: 300px;
+}
+.columnTexto{
+  margin-top: 100px;
+  float: left;
+  width: 40%;
+  height: 100px;
+}
+
+.imagenGrid{
+  width: 90%;
+  height: 85%;
+  margin-top: 10px;
+  margin-left: 5%;
+}
+
+.textoGrid{
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  color: black;
+  text-align: center;
+  font-size: 20px;
+}
+
+/* -------------------------------------- FOOTER --------------------------------------------*/
+footer{
+  //position: absolute;
+  //bottom: 0;
+background:#6868ad;//marga
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  text-align: center;
+  font-size: 15px;
+}
+
+.contenedorFooter{
+  width:100%;
+  height: 100%;
+  background:#6868ad;//marga
+  color:black;
+}
+
+.contendedorIntegrantes{
+  width: 34%;
+  height: 100%;
+  float: left;
+  background:#6868ad; //marga
+  color:white;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  text-decoration-style: solid;
+}
+
+.contenidoContenedor{
+  margin-top: 5%;
+  height: 100%;
+  background:#6868ad;//marga
+}
+
+.contenedorOntimize{
+  width: 33%;
+  height: 100%;
+  background:#6868ad;//marga
+  float: left;
+}
+
+.contenedorCampusDual{
+  width: 33%;
+  height: 100%;
+  float: left;
+  background:#6868ad; //marga
+}
+
+/* -------------------------------------- NOTICIAS --------------------------------------------*/
+
+.bodyNoticias{
+  background-color:#e7e7e7;
+}
+
+.bodyListadoNoticias{
+  width: 80%;
+  margin-left: 10%;
+}
+.tituloNoticia{
+  margin-left: 17%;
+  font-size: 25px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  margin-bottom: 3%;
+  font-style: italic;
+}
+
+.cuerpoNoticia{
+  color: black;
+}
+/* -------------------------------------- DETALLES --------------------------------------------*/
+.bodyDetalle{
+  background-color:#e7e7e7;
+}
+
+.bodyDetalleReparto{
+  background-color:#e7e7e7;
+  height: 800px;
+}
+
+o-form-toolbar.o-form-toolbar.ng-star-inserted{
+  display: none;
+}
+
+.contenedorDetalle{
+  border: 4px solid grey;
+  background-color: white;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 2%;
+}
+
+.imagenDetalle{
+  width: 100%;
+  height: 95%;
+  margin-bottom: 5%;
+}
+
+.imagenContenidoDetalle{
+  width: 90%;
+  height: 90%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.textoDetalle{
+  width: 90%;
+  margin-right: 5%;
+  height: 90%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.tituloDetalle{
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 24px;
+  margin-top: 1%;
+  margin-left: 35%;
+}
+
+.textoDetalleContenido{
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+}
+
+.o-grid-footer ng-star-inserted{
+  display: none;
+}
+
+.comentariosDetalle{
+  border: 4px solid grey;
+  background-color: white;
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 3%;
+  margin-bottom: 8%;
+}
+
+.listadoComentarios{
+  width: 98%;
+  margin: 1%;
+}
+
+.tituloComentario{
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 24px;
+  margin-top: 1%;
+  margin-left: 45%;
+}
+
+.mat-card-subtitle{
+  color: black;
+}

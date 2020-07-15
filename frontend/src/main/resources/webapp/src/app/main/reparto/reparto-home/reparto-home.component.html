@@ -1,18 +1,34 @@
-<div fxFlex>
-<o-table fxFlex 
-	attr="repartoTable" 
-	service="repartos" 
-	entity="reparto" 
-	keys="reparto_id" 
-  columns="reparto_id;reparto_nombre;reparto_apellido_1;reparto_apellido_2;reparto_bibliografia;reparto_foto"
-  visible-columns="reparto_id;reparto_nombre;reparto_apellido_1;reparto_apellido_2;reparto_bibliografia;reparto_foto" 
-  query-rows="5">
+<div class="contendedorParrillaContenido">
+	<div class="contenedorParrillas">
+		<div class="parrilla">
+			<o-grid #grid
+					columns="reparto_id;reparto_nombre;reparto_apellido_1;reparto_apellido_2;reparto_bibliografia;reparto_foto"
+					keys="reparto_id"
+					service="repartos"
+					entity="reparto"
+					show-page-size="no"
+					quick-filter="false"
+					[cols]="5"
+					pagination-controls="true"
+					query-rows="10"
+					show-footer="true"
+					controls="none"
+					page-size-options="10;20;30">
 
-<o-table-column attr="reparto_id" title="REPARTO_ID"></o-table-column>
-<o-table-column attr="reparto_nombre" title="NOMBRE"></o-table-column>
-<o-table-column attr="reparto_apellido_1" title="1º APELLIDO"></o-table-column>
-<o-table-column attr="reparto_apellido_2" title="2º APELLIDO"></o-table-column>
-<o-table-column attr="reparto_bibliografia" title="BIBLIOGRAFIA"></o-table-column>
-<o-table-column attr="reparto_foto" title="FOTOGRAFIA" type="image"></o-table-column>
-</o-table>
+				<o-grid-item *ngFor="let list of grid.dataArray">
+					<o-column>
+						<div class="contenedor">
+							<div class="columnImagen">
+								<o-image class="imagenGrid" data="{{list.reparto_foto}}" style="margin-top:8px" show-controls="false"></o-image>
+							</div>
+							<div class="columnTexto">
+								<p class="textoGrid" style="  font-size: 13px;color:white;"> <b> {{list.reparto_nombre}}</b>  </p>
+								<p class="textoGrid" style="  font-size: 13px;color:white;"> <b> {{list.reparto_apellido_1}}</b> </p>
+							</div>
+						</div>
+					</o-column>
+				</o-grid-item>
+			</o-grid>
+		</div>
+	</div>
 </div>

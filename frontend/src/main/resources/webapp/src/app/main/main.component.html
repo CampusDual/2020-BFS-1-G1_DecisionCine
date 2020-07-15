@@ -1,3 +1,25 @@
-<o-app-layout>
-  <router-outlet></router-outlet>
-</o-app-layout>
+<div id="bannerSuperior">
+  <div class="contenedorNombrePagina">
+    <div class="nombrePagina">
+      <img src="../../assets/images/iconoTitulo.png" alt="Imagen titulo Pagina" width="300" height="100">
+    </div>
+  </div>
+
+  <div class="menuSuperior">
+    <o-bar-menu title="MENU" class="opcionesMenu"></o-bar-menu>
+  </div>
+
+  <div class="contenedorBuscador">
+    <div class="buscadorSuperior">
+      <o-list-picker attr="Contenido a buscar" oLocker  read-only="no" service="contenidos"
+                     entity="contenido" columns="contenido_id;contenido_genero_id;contenido_tipo_contenido_id;contenido_titulo;contenido_sinopsis;
+                   contenido_duracion;contenido_puntuacion;contenido_fecha_estreno;contenido_capitulos;contenido_foto" value-column="contenido_titulo"
+                     keys="contenido_id" visible-columns="contenido_titulo" width="30%">
+      </o-list-picker>
+    </div>
+
+  </div>
+</div>
+
+<router-outlet></router-outlet>
+<app-shared-component-footer> </app-shared-component-footer>

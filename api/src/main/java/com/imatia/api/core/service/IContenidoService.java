@@ -23,7 +23,7 @@ public interface IContenidoService {
     public EntityResult tipocontenidoDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
 
     //Contenido Más Puntuado
-    public EntityResult puntuacionMasAlta(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException;
+    public EntityResult puntuadasQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException;
 
     // Genero
     public EntityResult generoQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException;

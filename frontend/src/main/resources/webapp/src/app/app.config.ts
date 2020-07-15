@@ -18,7 +18,7 @@ export const CONFIG: Config = {
   title: 'Decision Cine',
 
   //  Language of the application.
-  locale: 'en',
+  locale: 'es',
 
   // The service type used (Ontimize REST standart, Ontimize REST JEE
   // or custom implementation) in the whole application.

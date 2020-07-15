@@ -1,18 +1,31 @@
-<div fxFlex>
-  <o-table
-    fxFlex
-    attr="noticiasTable"
-    service="noticias"
-    entity="noticia"
-    keys="noticia_id"
-    columns="noticia_id;noticia_usuario_id;noticia_descripcion;noticia_fecha_alta;noticia_fecha_modificacion"
-    visible-columns="noticia_id;noticia_usuario_id;noticia_descripcion;noticia_fecha_alta;noticia_fecha_modificacion"
-    query-rows="5"
-  >
-  <o-table-column attr="noticia_id" title="NOTICIAID"></o-table-column>
-  <o-table-column attr="noticia_usuario_id" title="NOTICIAUSUARIOID"></o-table-column>
-  <o-table-column attr="noticia_descripcion" title="NOTICIADESCRIPCION"></o-table-column>
-  <o-table-column attr="noticia_fecha_alta" title="FECHAALTA" type="date" format="LL"></o-table-column>
-    <o-table-column attr="noticia_fecha_modificacion" title="FECHAMODIFICACION" type="date" format="LL"></o-table-column>
-  </o-table>
+<div class="bodyNoticias">
+  <div class="bodyListadoNoticias">
+    <o-list #list 
+        attr="noticia_id" 
+        columns="noticia_id;noticia_usuario_id;noticia_descripcion;noticia_fecha_alta;noticia_fecha_modificacion;noticia_titulo"
+        service="noticias"
+        entity="noticia"
+        title="Noticias"
+        quick-filter="false"
+        controls="none">
+
+      <mat-card *ngFor="let row of list.dataArray" [o-list-item]="row">
+        <mat-card-header>
+          <div mat-card-avatar>
+          
+          </div>
+          <mat-card-title>
+            <div  class="tituloNoticia">
+              {{ row.noticia_titulo }}
+            </div>
+          </mat-card-title>
+          <mat-card-subtitle class="cuerpoNoticia">{{ row.noticia_descripcion }}</mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+
+    </o-list>
+  </div>
 </div>
+
+
+

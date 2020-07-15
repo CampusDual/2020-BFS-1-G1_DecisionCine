@@ -7,6 +7,9 @@ import { HomeModule } from './home/home.module';
 import { NoticiasModule } from './noticias/noticias.module';
 import {ContenidoModule} from "./contenido/contenido.module";
 import {RepartoModule} from "./reparto/reparto.module";
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
+
 
 export function loadHomeModule() {
   return HomeModule;
@@ -29,7 +32,11 @@ export const routes: Routes = [
     component: MainComponent,
     canActivate: [AuthGuardService],
     children: [
-      { path: '', redirectTo: 'home', pathMatch: 'full' },
+      // { path: '', redirectTo: 'home', pathMatch: 'full' },
+      {
+        path: '',
+        loadChildren: loadHomeModule
+      },
       {
         path: 'home',
         loadChildren: loadHomeModule
@@ -45,7 +52,9 @@ export const routes: Routes = [
 	    {
         path:  'reparto',
         loadChildren: loadRepartoModule
-      }
+      },
+      { path: '**', component: PageNotFoundComponent }
+
     ]
   }
 ];
