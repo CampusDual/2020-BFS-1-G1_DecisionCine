@@ -23,7 +23,6 @@ export class HomeComponent implements OnInit {
   }
 
   onRedirectToDetail(event: OGridItemDirective) {
-
     let idDetalle: Number;
     console.log("entrando en: onRedirectToDetail()");
     console.log(event.getItemData());
@@ -32,5 +31,4 @@ export class HomeComponent implements OnInit {
     this.router.navigateByUrl("/main/contenido/" + idDetalle);
 
   }
-
 }

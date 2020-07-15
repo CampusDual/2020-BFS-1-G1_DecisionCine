@@ -26,7 +26,6 @@ export class ContenidoDetailComponent implements OnInit {
 				this.comentarioFiltrado = response["data"];
 				this.inicializarcomentario(this.comentarioFiltrado.length);
 			})
-
 		}
 
 		)

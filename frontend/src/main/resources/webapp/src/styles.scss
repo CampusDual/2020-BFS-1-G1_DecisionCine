@@ -31,12 +31,22 @@
 
 /* banner de opciones*/
 .buscadorSuperior{
-  margin-left: 30px;
-  margin-top: 10%;
   float: left;
   width: 80%;
+  margin-right: 5%;
   height: 50%;
-  margin-right: 20%;
+}
+
+.botonSuperior{
+  width: 20%;
+  margin-left: 25%;
+  float: right;
+}
+
+.botonBusqueda{
+  background-color: darkblue;
+  border: 2px solid grey;
+  border-radius: 2px;
 }
 
 .nombrePagina{
@@ -56,7 +66,7 @@
 }
 
 o-bar-menu-nested {
-  margin-left: 200px;
+  margin-left: 280px;
 }
 
 /* -------------------------------------- PARRILLAS --------------------------------------------*/
@@ -158,7 +168,6 @@ background:#6868ad;//marga
 }
 
 /* -------------------------------------- NOTICIAS --------------------------------------------*/
-
 .bodyNoticias{
   background-color:#e7e7e7;
 }
@@ -178,9 +187,14 @@ background:#6868ad;//marga
 .cuerpoNoticia{
   color: black;
 }
+
 /* -------------------------------------- DETALLES --------------------------------------------*/
 .bodyDetalle{
   background-color:#e7e7e7;
+
+o-form-toolbar.o-form-toolbar.ng-star-inserted{
+  display: none;
+
 }
 
 .bodyDetalleReparto{
