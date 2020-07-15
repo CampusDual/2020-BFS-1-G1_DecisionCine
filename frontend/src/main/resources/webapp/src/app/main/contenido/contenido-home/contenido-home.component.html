@@ -1,35 +1,99 @@
-<div class="contendedorParrillaContenido">
-	<div class="contenedorParrillas">
-		<div class="parrilla">
-			<o-grid #grid
-					columns="contenido_id;contenido_genero_id;contenido_tipo_contenido_id;contenido_titulo;contenido_sinopsis;contenido_duracion;contenido_puntuacion;contenido_fecha_estreno;contenido_capitulos;contenido_foto"
-					keys="contenido_id"
-					service="contenidos"
-					entity="contenido"
-					show-page-size="no"
-					quick-filter="false"
-					[cols]="5"
-					pagination-controls="true"
-					query-rows="10"
-					show-footer="true"
-					controls="none"
-					page-size-options="10;20;30"
-					query-rows="10">
+<o-form
+  editable-detail="no"
+  show-header="no"
+  class="contenidos-filters-form"
+  fxFill
+>
+  <o-column>
+    <div class="filtros">
+      <div class="buscar_por_genero">
+        <o-combo
+          attr="genero_id"
+          read-only="no"
+          service="contenidos"
+          entity="genero"
+          columns="genero_id;genero_nombre"
+          value-column="genero_id"
+          keys="genero_id"
+          visible-columns="genero_nombre"
+          fxFlex="90"
+          (onValueChange)="valorCombo($event)"
+        >
+        </o-combo>
+      </div>
+    </div>
+    <o-row layout-align="end">
+      <o-button
+        attr="filter"
+        [oFilterBuilderQuery]="filterBuilder"
+        type="RAISED"
+        label="Filter"
+        (click)="createFilter()"
+      >
+      </o-button>
+      <o-button
+        attr="clear"
+        [oFilterBuilderClear]="filterBuilder"
+        type="RAISED"
+        label="Clear"
+        class="filter-button"
+        (click)="filterBuilder.clearFilter()"
+      >
+      </o-button>
+    </o-row>
+    <o-filter-builder
+      #filterBuilder
+      attr="filterBuilder"
+      filters="genero_id"
+      [target]="grid"
+      [expression-builder]="createFilter"
+    >
+    </o-filter-builder>
+  </o-column>
 
-				<o-grid-item *ngFor="let list of grid.dataArray">
-					<o-column>
-						<div class="contenedor">
-							<div class="columnImagen">
-								<o-image class="imagenGrid" data="{{list.contenido_foto}}" style="margin-top:8px" show-controls="false"></o-image>
-							</div>
-							<div class="columnTexto">
-								<p class="textoGrid" style="  font-size: 13px; color:white;"> <b>{{list.contenido_titulo}}</b> </p>
-								<p class="textoGrid" style="  font-size: 13px;color:white;"> <b>Valoracion:</b> {{list.contenido_puntuacion}} </p>
-							</div>
-						</div>
-					</o-column>
-				</o-grid-item>
-			</o-grid>
-		</div>
-	</div>
-</div>
+  <div class="contendedorParrillaContenido">
+    <div class="contenedorParrillas">
+      <div class="parrilla">
+        <o-grid
+          #grid
+          columns="contenido_id;contenido_genero_id;contenido_tipo_contenido_id;contenido_titulo;contenido_sinopsis;contenido_duracion;contenido_puntuacion;contenido_fecha_estreno;contenido_capitulos;contenido_foto"
+          keys="contenido_id"
+          service="contenidos"
+          entity="contenido"
+          show-page-size="no"
+          quick-filter="false"
+          [cols]="5"
+          pagination-controls="true"
+          query-rows="10"
+          show-footer="true"
+          controls="none"
+          page-size-options="10;20;30"
+          query-rows="10"
+        >
+          <o-grid-item *ngFor="let list of grid.dataArray">
+            <o-column>
+              <div class="contenedor">
+                <div class="columnImagen">
+                  <o-image
+                    class="imagenGrid"
+                    data="{{ list.contenido_foto }}"
+                    style="margin-top: 8px;"
+                    show-controls="false"
+                  ></o-image>
+                </div>
+                <div class="columnTexto">
+                  <p class="textoGrid" style="font-size: 13px; color: white;">
+                    <b>{{ list.contenido_titulo }}</b>
+                  </p>
+                  <p class="textoGrid" style="font-size: 13px; color: white;">
+                    <b>Valoracion:</b> {{ list.contenido_puntuacion }}
+                  </p>
+                </div>
+              </div>
+            </o-column>
+          </o-grid-item>
+        </o-grid>
+      </div>
+    </div>
+  </div>
+</o-form>
