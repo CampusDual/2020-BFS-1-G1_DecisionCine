@@ -47,5 +47,15 @@ export class RepartoDetailComponent implements OnInit {
 			this.mostrarFilmografia = true;
 		}
 	}
+
+	// TODO actualmente no se usa
+	onRedirectToContentDetail(event: OGridItemDirective) {
+		
+		let idDetalle: Number;
+		console.log("entrando en: onRedirectToContentDetail()");
+		console.log(event);
+		console.log(event.getItemData());
+		
+	}
 }
 
